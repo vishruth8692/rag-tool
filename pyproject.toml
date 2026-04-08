@@ -1,0 +1,22 @@
+[project]
+name = "rag-tool"
+version = "0.1.0"
+description = "Open-source RAG framework with evaluation and A/B testing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0.1",
+  "fastapi>=0.112.0",
+  "uvicorn>=0.30.0",
+  "streamlit>=1.37.0",
+  "pypdf>=4.3.1"
+]
+
+[project.optional-dependencies]
+providers = [
+  "sentence-transformers>=3.0.1",
+  "torch>=2.2.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

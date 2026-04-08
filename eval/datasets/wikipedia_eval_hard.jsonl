@@ -1,0 +1,519 @@
+{"query": "Who suggested Lincoln grow a beard?", "reference_answer": "11-year-old Grace Bedell", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "When did the Gettysburg address argue that America was born?", "reference_answer": "1776", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Did Lincoln beat John C. Breckinridge in the 1860 election?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Did Lincoln win the election of 1860?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Who was the general in charge at the Battle of Antietam?", "reference_answer": "John Alexander McClernand", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Why did Lincoln issue the Emancipation Proclamation?", "reference_answer": "The goal was to weaken the rebellion, which was led and controlled by slave owners", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "What trail did Lincoln use a Farmers' Almanac in?", "reference_answer": "he defended William \"Duff\" Armstrong", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Did Abraham Lincoln live in the Frontier?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Did Lincoln's Wife's Family support slavery?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "hard"}
+{"query": "How can beetle larvae be differentiated from other insect larvae?", "reference_answer": "By their hardened, often darkened head, the presence of chewing mouthparts, and spiracles along the sides of the body", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "What do beetles eat?", "reference_answer": "Some are generalists, eating both plants and animals. Other beetles are highly specialised in their diet", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "What are the similarities between beetles and grasshoppers?", "reference_answer": "Beetles have mouthparts similar to those of grasshoppers", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "Is it possible that there are more than 350,000 species of beetles?", "reference_answer": "yes", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "Is the Adephaga suborder larger than the Polyphaga suborder?", "reference_answer": "yes", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "Do carrion beetles eat dung?", "reference_answer": "no", "expected_doc_ids": ["S08_set1_a8.txt"], "difficulty": "hard"}
+{"query": "What did Coolidge do after graduating from Amherst?", "reference_answer": "Coolidge moved to Northampton, MassachuS08_setts to take up the practice of law", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Of what state was Coolidge governor?", "reference_answer": "MassachuS08_setts", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Who appointed Harlan Fiske Stone to the Supreme Court?", "reference_answer": "Coolidge", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Is Calvin Jr. older than John Coolidge?", "reference_answer": "No", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Did Coolidge get in Amherst College?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "What caused Calvin Jr.'s death?", "reference_answer": "heart attack", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Why did Coolidge not attend law school?", "reference_answer": "It was too expensive", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Have there been other US presidents that have visited Cuba?", "reference_answer": "No", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "What years were Coolidge's two sons born in?", "reference_answer": "1906 and 1908", "expected_doc_ids": ["S08_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Which countries established colonies in Canada?", "reference_answer": "France and Britain", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "How has Canada helped UN peacekeeping efforts?", "reference_answer": "Canada has played a leading role in UN peacekeeping efforts. During the Suez Crisis of 1956, Lester B. Pearson eased tensions by proposing the inception of the United Nations Peacekeeping Force. Canada has since served in 50 peacekeeping missions, including every UN peacekeeping effort until 1989", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "What percentage of the population don't speak English or French at home?", "reference_answer": "1.5%", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "What is the largest country in the world?", "reference_answer": "Canada is the second largest country in the world, after Russia, and largest on the continent", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "What is the largest religious group in Canada?", "reference_answer": "According to 2001 census, 77.1% of Canadians identified as being Christians; of this, Catholics make up the largest group (43.6% of Canadians). The largest Protestant denomination is the United Church of Canada; about 16.5% of Canadians declare no religious affiliation, and the remaining 6.3% were affiliated with religions other than Christianity, of which the largest is Islam numbering 1.9%, followed by Judaism: 1.1%", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "When did Canada have one of the largest armed forces in the world?", "reference_answer": "World War II", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Who is Daffy Duck?", "reference_answer": "A silly cartoon character", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What makes it more difficult for a diving duck to fly?", "reference_answer": "They are heavier", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What are the reasons for hunting wild ducks?", "reference_answer": "Meat, eggs, and feathers", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What does the word duck mean?", "reference_answer": "It is the common name for a number of species in the Anatidae family of birds", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What are some common predators of ducks?", "reference_answer": "pike, crocodilians, and other aquatic hunters", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "How does a Mallard's tongue work?", "reference_answer": "It's tongue is a flat plate, and on the tongue's back end is a short liftable flap with about 18 short spikes for pushing struggling prey and other food down its throat", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What allows a duck to filter water out of the side of their beaks and keep food inside?", "reference_answer": "tiny rows of plates called lamellae like a whale's baleen", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What expression is part of a conceptual framework for testing computer systems?", "reference_answer": "Quacks like a duck", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Where did the expression \"a sitting duck\" come from?", "reference_answer": "In many areas, wild ducks of various species (including ducks farmed and released into the wild) are hunted for food or sport, by shooting, or formerly by decoys", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Why does most of Egypt's population live near the Nile?", "reference_answer": "the only arable agricultural land is found there,", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "Are there a large number of Jews living in Egypt today?", "reference_answer": "no", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "During what period was Akhenaten a Pharaoh?", "reference_answer": "The New Kingdom (c.1550&#8722;1070 BC)", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What is the estimated population of Egypt?", "reference_answer": "More than 78 million", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "Does snow fall in Egypt?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "When did organized agriculture appear in the Nile Valley?", "reference_answer": "About 6000 BC", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "hard"}
+{"query": "How many living species of Asian Elephants are there?", "reference_answer": "one", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "How much do elephants weight at birth?", "reference_answer": "At birth it is common for an elephant calf to weigh 120 kilograms (265 lb)", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What did Aristotle say about elephants?", "reference_answer": "Aristotle once said the elephant was \"the beast which pasS08_seth all others in wit and mind.\"", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "How many species of African elephants have been proposed?", "reference_answer": "three", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What are the elephant's ears important for?", "reference_answer": "temperature regulation", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What land animal has the largest brain?", "reference_answer": "The elephant", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Is an Asian elephant smaller than an African elephant?", "reference_answer": "yes", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What land animal is larger than an elephant?", "reference_answer": "None, the elephant is the largest land animal", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Has tusklessness become a rare abnormality?", "reference_answer": "No, tusklessness has become a widespread hereditary trait", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What body of water lies to the south of Finland?", "reference_answer": "the Gulf of Finland", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Name an animal that is growing in number due to recent conservation efforts", "reference_answer": "Golden Eagle, Brown Bear, or Eurasian Lynx (Change imperative to interrogative)", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Today, are there more cell phone subscriptions than people in Finland?", "reference_answer": "yes", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "What is Finland's economy like?", "reference_answer": "a highly industrialised, free-market economy", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Where is Finland located?", "reference_answer": "Northern Europe", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "What is the weather like in summer?", "reference_answer": "relatively warm", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Does a large proportion of the population speak Swedish as its mother tongue?", "reference_answer": "No", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Do women live longer than men?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "What is a country with which Finland is involved in an international conflict?", "reference_answer": "Finland is not involved in international conflicts or border disputes", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Was Ford active about Vietnamese affairs?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "Had Ford's wife married before?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "Is Ford related with the assassination of John F. Kennedy?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "Has another US President been an Eagle Scout?", "reference_answer": "no", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "Did Ford need to do extra work to pay for college?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "Have more than five Presidents lived past the age of 90?", "reference_answer": "no", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "What is the dominant religion in Ghana?", "reference_answer": "Christian", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What are the two subfamilies of the Native Ghanaian languages?", "reference_answer": "Kwa and Gur", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What is the weather like at Lake Volta?", "reference_answer": "Warm and comparatively dry", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "hard"}
+{"query": "Who makes up Ghana's Parliament?", "reference_answer": "the New Patriotic Party and National Democratic Congress", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What European countries established states in Ghana?", "reference_answer": "Portugual, France, Britain, Netherlands", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "hard"}
+{"query": "Why do wolves howl?", "reference_answer": "Howling helps pack members keep in touch, allowing them to communicate effectively in thickly forested areas or over great distances. Howling also helps to call pack members to a specific location. Howling can also serve as a declaration of territory, as shown in a dominant wolf&apos;s tendency to respond to a human imitation of a \"rival\" wolf in an area the wolf considers its own", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What is surplus killing?", "reference_answer": "Surplus killing is defined as the killing of several prey animals too numerous to eat at one sitting", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Are Gray Wolves native to North America?", "reference_answer": "No. Current theory suggests that it's from Eurasia", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Why is it beneficial for alpha males and females to forcefully prevent other wolves from mating?", "reference_answer": "The pack tension rises as each mature wolf feels urged to mate", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What type of tools do biologists use to capture wolves for tagging?", "reference_answer": "Darting and Foot hold traps", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Forward, erect ears and slightly bristle hackles are a sign of what in wolves?", "reference_answer": "Dominance", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What did Cleveland's opponents say in 1884 to counter his innocent image?", "reference_answer": "that he had fathered an illegitimate child while he was a lawyer in Buffalo", "expected_doc_ids": ["S08_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Who did Cleveland run against in 1884?", "reference_answer": "former Senator James G. Blaine of Maine", "expected_doc_ids": ["S08_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Why did Cleveland want to hide his cancer surgery from the public?", "reference_answer": "because of the financial depression of the country", "expected_doc_ids": ["S08_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Who were Grover Cleveland's parents?", "reference_answer": "Cleveland was born in Caldwell, New Jersey to the Reverend Richard Cleveland and Anne Neal", "expected_doc_ids": ["S08_set3_a6.txt"], "difficulty": "hard"}
+{"query": "How many children did Grover Cleveland have?", "reference_answer": "Six", "expected_doc_ids": ["S08_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Was Indonesia named after it became an independent country?", "reference_answer": "no", "expected_doc_ids": ["S08_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Why did Indonesia break off relations with the People's Republic of China?", "reference_answer": "because of anti-communist purges early in the Suharto era", "expected_doc_ids": ["S08_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Which spice originally attracted Europeans to Indonesia?", "reference_answer": "nutmeg, cloves, and cubeb pepper", "expected_doc_ids": ["S08_set2_a10.txt"], "difficulty": "hard"}
+{"query": "What does \"Era of Good Feelings\" refers to?", "reference_answer": "Monroe allowed his political base to decay, which reduced tensions and led to the naming of his era as the \"Era of Good Feelings\"", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Did Monroe' wedding happen at the Trinity Church in New York?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What is Monroe Doctrine?", "reference_answer": "In it, Monroe proclaimed the Americas should be free from future European colonization and free from European interference in sovereign countries' affairs. It further stated the United States' intention to stay neutral in European wars and wars between European powers and their colonies, but to consider any new colonies or interference with independent countries in the Americas as hostile acts toward the United States", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What did James Monroe do before being elected governor?", "reference_answer": "He practiced law in Virginia", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "In which years were John Monroe elected as President?", "reference_answer": "1817-1825", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Who was John Monroe standing behind in the painting of  Washington Crossing the Delaware?", "reference_answer": "George Washington", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Who did James Monroe live with in New York City?", "reference_answer": "His daughter Maria Hester Monroe Gouverneur", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What did James Monroe's letters not contain?", "reference_answer": "No letters survive in which he might have discussed his religious beliefs", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What was the result of the rejection of the Jay Treaty?", "reference_answer": "As a result, the two nations moved closer toward the War of 1812", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What was Adams' political party?", "reference_answer": "The Federalist Party", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Was Adams the first to introduce a bicameral legislature?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Did John Adams get along with Alexander Hamilton?", "reference_answer": "No", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Who were the midnight judges?", "reference_answer": "They were a series of judges, so called because most of them were formally appointed days before Adams' presidential term expired", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "In what ways was Adams opposed by Anderw Hamilton?", "reference_answer": "Hamilton wanted to control the army differently than Adams", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "What information did he record in his diary?", "reference_answer": "He wrote descriptions of events and impressions of men", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "hard"}
+{"query": "What do kangaroos use for \"crawl-walking?\"", "reference_answer": "Their hind feet and their tails", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Why do kangaroos have a wide bite?", "reference_answer": "The two sides of the lower jaw are not joined together and the lower incisors are farther apart", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What is responsible for converting the hydrogen byproduct of fermentation into acetate?", "reference_answer": "The digestive system of a kangaroo", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Do kangaroos eat plants?", "reference_answer": "yes", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What are some extinct predators of the kangaroo?", "reference_answer": "Thylacine, Marsupial Lion, Maagalania, and Wonambi", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What is a roo?", "reference_answer": "a kangaroo", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What is used to protect a vehicale from a Kangaroo?", "reference_answer": "roo bars", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What method is used by Kangaroos to travel?", "reference_answer": "hopping", "expected_doc_ids": ["S08_set1_a1.txt"], "difficulty": "hard"}
+{"query": "How did early naturalists distinguish between leopards and panthers?", "reference_answer": "By the length of the tail, panthers having longer tails than leopards", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "What are dark leopards known as colloquially?", "reference_answer": "Black Panthers", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "What shape are a leopard's black roS08_settes in East Africa?", "reference_answer": "circular", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "Does a male leopard weigh more than a female leopard?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "What is the difference between leopards and cheetahs?", "reference_answer": "The leopard has roS08_settes rather than cheetah's simple spots, but they lack internal spots, unlike the jaguar. The leopard is larger and less lanky than the cheetah but smaller than the jaguar", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "How does the distribution size of the leopard compare to the distribution of other wild cats?", "reference_answer": "As of 1996, the leopard had the largest distribution of any wild cat, although populations before and since have shown a declining trend and are fragmented outside of subsaharan Africa", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "hard"}
+{"query": "Has Leichtenstein worked to promote the county's image by prosecuting international money-laundering?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What company administers Leichtenstein's railways?", "reference_answer": "Austrian Federal Railways", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What percentage of Liechtenstein's population is foreign-born?", "reference_answer": "two-thirds", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What countries border Liechtenstein?", "reference_answer": "Switzerland and Austria", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What Roman province was Liechtenstein part of?", "reference_answer": "Raetia", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "How many municipalities are within Oberland?", "reference_answer": "6", "expected_doc_ids": ["S08_set2_a1.txt"], "difficulty": "hard"}
+{"query": "Did Fillmore form a law partnership before or after he founded the private University of Buffalo?", "reference_answer": "Law partnership founded before University of Buffalo", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "Did Fillmore run for President a second time?", "reference_answer": "I don't know (semantic ambiguity)", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "How long after the death of his first wife did Fillmore marry Caroline McIntosh?", "reference_answer": "where is the death date of his first wife?", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "What did Taylor and Fillmore disagree upon?", "reference_answer": "Taylor and Fillmore disagreed on the slavery issue in the new western territories taken from Mexico in the Mexican-American War", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "How did Fillmore ascend to the presidency?", "reference_answer": "Official White House portrait of Millard FillmoreFillmore ascended to the presidency upon the sudden and unexpected death of President Taylor in July 1850", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "How did the supporters of Henry Clay feel about Fillmore in 1848?", "reference_answer": "they were ok with him", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "hard"}
+{"query": "How do sea otters insulate themselves?", "reference_answer": "As with other species of otter, they rely on a layer of air trapped in their fur, which they keep topped up by blowing into the fur from their mouths", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Why are sea otters nearly extinct?", "reference_answer": "Sea otters have some 200,000 hairs per square cm of skin, a rich fur for which humans hunted them", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "What is one of the challenges of re-establishing a population of Eurasian otters in the UK?", "reference_answer": "Roadkill deaths have become one of the significant threats to the success of their re-establishment", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Does otter give birth or lay egg?", "reference_answer": "give birth", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "What drives sea otter almost to extinction?", "reference_answer": "Sea otters have some 200,000 hairs per square cm of skin, a rich fur for which humans hunted them almost to extinction", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Why otters are considered as totem animals?", "reference_answer": "The time of year associated with this is also associated with the Aquarius sign of the Zodiac, through which the sun passes January 20-February 19", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "How do otters keep themselves warm without blubber?", "reference_answer": "A layer of air trapped in their fur", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "How are otters playful animals?", "reference_answer": "The slide down snowy slopes, apparently for sheer enjoyment", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "What animals are related to otters?", "reference_answer": "weasels, polecats, and badgers", "expected_doc_ids": ["S08_set1_a7.txt"], "difficulty": "hard"}
+{"query": "How much time to penguins spend on land?", "reference_answer": "They spend half of their life on land", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "hard"}
+{"query": "How many species of penguins are there?", "reference_answer": "Penguin biodiversity varies between 17 and 20 living species, all in the subfamily Spheniscinae", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "hard"}
+{"query": "How are Isabelline penguins different from most penguins?", "reference_answer": "Because they are born with brown rather than black plumage", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "hard"}
+{"query": "What makes penguins so agile in the water?", "reference_answer": "Smooth plumage preserves a layer of air, ensuring buoyancy, wings are flippers", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "hard"}
+{"query": "Why do penguins \"tobaggan\"?", "reference_answer": "It conserves energy while moving quickly", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "hard"}
+{"query": "What is cause of polar bear's skin diseases?", "reference_answer": "mites or other parasites", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Why polar bear is a special species?", "reference_answer": "The World Conservation Union listed polar bears as a vulnerable species, one of three sub-categories of threatened status, in May 2006. Their latest estimate is that 7 out of 19 subpopulations are declining or already severely reduced", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "What do fossil and DNA evidence tell us?", "reference_answer": "The polar bear diverged from the brown bear roughly 200 thousand years ago", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Do female polar bears weight more than the male?", "reference_answer": "no", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "How much weight do female polar bears gain during pregnancy?", "reference_answer": "They double their weight during pregnancy", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Can polar bears be seen under infrared photography?", "reference_answer": "Polar bears are nearly invisible under infrared photography", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Does the native pronunciation of Qatar sound like 'cutter'?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What is the Arabic word for municipalities?", "reference_answer": "baladiyah", "expected_doc_ids": ["S08_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What universities are in Education City?", "reference_answer": "Carnegie Mellon University, Georgetown University School of Foreign Service, Texas A&M University, Virginia Commonwealth University, and Cornell University's Weill Medical College", "expected_doc_ids": ["S08_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Is the Romanian economy doing well?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Are there many Roma in Romania?", "reference_answer": "No", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "How many territories joined to form Romania?", "reference_answer": "2", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "How many countries in Europe are bigger than Romania?", "reference_answer": "eleven", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Why doesn't Romania have a state religion?", "reference_answer": "Romania is a secular state", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Why wasn't Romania neutral during World War II?", "reference_answer": "The Soviets threatened invasion", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "hard"}
+{"query": "How is Singapore's climate characterized?", "reference_answer": "Its climate is characterized by uniform temperature and pressure, high humidity, and abundant rainfall", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "How much increase in the media's contribution to GDP is the government seeking?", "reference_answer": "The government seeks to increase its GDP contribution to 3% by 2012", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "How many days did it take the Imperial Japanese Army to win the Battle of Singapore?", "reference_answer": "Six days", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Why Churchill called the occupation of Singapor by Janpan during WWII \"Britain's greatest defeat\"?", "reference_answer": "The British were defeated in six days", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Was Lee Kuan Yew a successful leader of Singapore?", "reference_answer": "yes", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Who did Sir Thomas Stamford Raffles work for?", "reference_answer": "British East India Company", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "When was Lee Kuan Yew prime minister of Singapore?", "reference_answer": "1959", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "What is the punishment for first-degree murder?", "reference_answer": "There are laws which allow capital punishment in Singapore for first-degree murder and drug trafficking", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "hard"}
+{"query": "What was the nickname of Theodore Roosevelt's sister Anna?", "reference_answer": "Bamie as a child and Bye as an adult", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "What was Roosevelt's justification for supporting desegregation of schools in New York?", "reference_answer": "Noting that his children had been educated with other races and there was nothing wrong with it", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "How did newspapers respond to Roosevelt inviting Brooker T. Washington to dinner at the White House?", "reference_answer": "mixing of the races on social occassions", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Who helped to fund Roosevelt's African safari?", "reference_answer": "Financed by Andrew Carnegie and his own proposed writings", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Did Roosevelt support racial integration in schools?", "reference_answer": "He supported a bill allowing school desegregation in New York State", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Was Roosevelt's family rich?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "How do turtles reproduce?", "reference_answer": "They lay eggs", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What has been discovered about turtles organs?", "reference_answer": "They do not gradually break down or become less efficient over time", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What suborder of turtle draws its head into its shell?", "reference_answer": "Pleurodira", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "If a turtle egg was kept warm, what would likely hatch?", "reference_answer": "A female turtle", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What do turles use to breathe in the water?", "reference_answer": "Papillae", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "Why are side-necked turtles called side-necked turtles?", "reference_answer": "Because of the way they withdraw their heads into their shells", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What is the smallest suborder of turtles?", "reference_answer": "Pleurodira", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What are turtle eggs covered in when they incubate?", "reference_answer": "Mud or Sand", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What type of creatures breathe air and don't lay eggs underwater?", "reference_answer": "Amniotes", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "hard"}
+{"query": "Why did Grant say \"Damn, I had nothing to do with this batte.\"?", "reference_answer": "Because the generals under him acted on their own", "expected_doc_ids": ["S08_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Did Horace Greenley lose in the presidential elections of 1872?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Why did Grant think that war was unjust?", "reference_answer": "He accepted the theory that it was designed to gain land open to slavery", "expected_doc_ids": ["S08_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What are poor neighborhoods called informally?", "reference_answer": "Cantegriles", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Is uruguay's landscape mountainous?", "reference_answer": "not really?", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "What religion do most Uruguayans profess?", "reference_answer": "Roman Catholic", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Why was the capital of Uruguay founded?", "reference_answer": "Uruguay's capital, Montevideo, was founded by the Spanish in the early 18th century as a military stronghold", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "How many times has Uruguay won the World Cup?", "reference_answer": "On two or more occasions", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "How much is the average income of an African woman compared to a European man?", "reference_answer": "African women earns 0.65 * 0.718  = 46.67% of a European man earns in average", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "What has Uruguay done to be competitive in agriculture?", "reference_answer": "Use low inputs of labour, technology, and capital, which results in lower yields but also opens the door for Uruguay to market its products as \"natural\" or \"ecological\"", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "What are the names of Uruguay's political parties?", "reference_answer": "Partido Colorado and Partido Blanco", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Is Uruguay the smallest soverign nation in South America?", "reference_answer": "No", "expected_doc_ids": ["S08_set2_a9.txt"], "difficulty": "hard"}
+{"query": "What field did Woodrow Wilson leave law practice to study?", "reference_answer": "history and political science", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "What caused Wilson to ask Congress to declare war on the Central Powers?", "reference_answer": "German began unrestricted submarine warfare", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "What was more damaging than moving students into colleges?", "reference_answer": "His confrontation with Andrew Fleming West", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Did Wilson support desegregation?", "reference_answer": "Not in the slightest", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Did Wilson support the committee system?", "reference_answer": "no", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Did Wilson have any siblings?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Is it a disadvantage for something to be unsafe to handle?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a10.txt"], "difficulty": "hard"}
+{"query": "Was Lombardy under Napoleon's rule in 1800?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a10.txt"], "difficulty": "hard"}
+{"query": "Was the Italian 10.000 lira banknote created before the euro?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a10.txt"], "difficulty": "hard"}
+{"query": "What is Avogadro's number?", "reference_answer": "6.02214199x10 23", "expected_doc_ids": ["S09_set4_a8.txt"], "difficulty": "hard"}
+{"query": "In what year did Avogadro stop teaching at Turin University?", "reference_answer": "1853", "expected_doc_ids": ["S09_set4_a8.txt"], "difficulty": "hard"}
+{"query": "What subject did Avogadro study first?", "reference_answer": "ecclesiastical law", "expected_doc_ids": ["S09_set4_a8.txt"], "difficulty": "hard"}
+{"query": "How old was Celsius when he died?", "reference_answer": "42", "expected_doc_ids": ["S09_set4_a5.txt"], "difficulty": "hard"}
+{"query": "What is temperature would water have to be to be halfway between its standard boiling and freezing point?", "reference_answer": "50", "expected_doc_ids": ["S09_set4_a5.txt"], "difficulty": "hard"}
+{"query": "What is the difference between Celsius' original temperature scale and the one we use today?", "reference_answer": "The scale was reversed by Carolus Linnaeus", "expected_doc_ids": ["S09_set4_a5.txt"], "difficulty": "hard"}
+{"query": "How did vespoid wasps evolve?", "reference_answer": "from predatory ancestors", "expected_doc_ids": ["S09_set1_a8.txt"], "difficulty": "hard"}
+{"query": "What do humans use bees for?", "reference_answer": "honey", "expected_doc_ids": ["S09_set1_a8.txt"], "difficulty": "hard"}
+{"query": "Why do honey bee queens continue to lay eggs during the foraging season?", "reference_answer": "to replace daily casualties", "expected_doc_ids": ["S09_set1_a8.txt"], "difficulty": "hard"}
+{"query": "When did Yuan Shikai die?", "reference_answer": "1916", "expected_doc_ids": ["S09_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Where does air pollution in Beijing come from?", "reference_answer": "surrounding cities and provinces", "expected_doc_ids": ["S09_set3_a7.txt"], "difficulty": "hard"}
+{"query": "As of August 1st, 2006, how many trains stop daily at the Beijing Railway Station or the Beijing West Railway Station?", "reference_answer": "167", "expected_doc_ids": ["S09_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Who was the eldest sibling?", "reference_answer": "Gilberte", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Aside from the Provincial Letters' religious influence, were they popular as a literary work?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Of whose continual poor health was the cause never precisely determined?", "reference_answer": "Blaise Pascal", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Which harmonics can produce any notes above middle C?", "reference_answer": "Artificial harmonics can produce any notes above middle C", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Who referred to the cello as \ufffdbasso de viola da braccio\"?", "reference_answer": "Monteverdi referred to the cello as \"basso de viola da braccio\"", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Where is the violincello held?", "reference_answer": "The violincello is held on the shoulder", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Why is there purling on a cello?", "reference_answer": "to stop cracks from forming ****misspelled****", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "When did the first educational works appear for the cello?", "reference_answer": "the 18th century", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "What cello manufacturer should I buy from if I want to play outside?", "reference_answer": "Luis & Clark", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Where did the construction of Fort Bourbon take place?", "reference_answer": "The construction of Fort Bourbon took place in Martinique", "expected_doc_ids": ["S09_set4_a6.txt"], "difficulty": "hard"}
+{"query": "What is the definition of the electrostatic force of attraction and repulsion?", "reference_answer": "Coulomb's law is the definition of the electrostatic force of attraction and repulsion", "expected_doc_ids": ["S09_set4_a6.txt"], "difficulty": "hard"}
+{"query": "When did Charles-Augustin de Coulomb retire to a small estate he possessed at Blois?", "reference_answer": "Charles-Augustin de Coulomb retired to a small estate he possessed at Blois on the outbreak of the revolution in 1789", "expected_doc_ids": ["S09_set4_a6.txt"], "difficulty": "hard"}
+{"query": "Copenhagen is ranked number one worldwide for which things?", "reference_answer": "Most Livable City, Location Ranking Survey", "expected_doc_ids": ["S09_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Why did German troops occupy Copenhagen?", "reference_answer": "Because it was WW2", "expected_doc_ids": ["S09_set3_a8.txt"], "difficulty": "hard"}
+{"query": "What happens when the center of a Cymbal is hit?", "reference_answer": "It causes a sound which is in a higher register than the rest of the symbal", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What is an effective way to accentuate a note?", "reference_answer": "The combination of a clash cymbol being accompanied by a bass drum playing an identical part, played loudly", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "From what type of Cymbals can a expert player obtain an enormous dynamic range?", "reference_answer": "An expert player can obtain an enormous dynamic range from crash cymbals", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What two instruments form the modern drum kit?", "reference_answer": "the cymbals and the drum", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What Greek mythical creatures were depicted holding cymbals?", "reference_answer": "fauns and satyrs", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What are orchestral crash cymbals technically called?", "reference_answer": "a pair of clash cymbals", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "hard"}
+{"query": "Did the Mughals arrive in Dhaka?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set3_a3.txt"], "difficulty": "hard"}
+{"query": "Is University of Dhaka older than the Dhaka College?", "reference_answer": "No", "expected_doc_ids": ["S09_set3_a3.txt"], "difficulty": "hard"}
+{"query": "What are the oldest known musical instruments?", "reference_answer": "A three-holed flute made from a mammoth tusk and two flutes made from swans' bones are among the oldest known musical instruments", "expected_doc_ids": ["S09_set2_a5.txt"], "difficulty": "hard"}
+{"query": "When was the pan flute spread to other parts of Europe?", "reference_answer": "After the 7th century BC", "expected_doc_ids": ["S09_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What does the air stream across this hole create?", "reference_answer": "A Bernoulli, or siphon", "expected_doc_ids": ["S09_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What are female foxes called?", "reference_answer": "vixens", "expected_doc_ids": ["S09_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What is caching food?", "reference_answer": "Caching is burying it for later consumption, usually under leaves, snow, or soil", "expected_doc_ids": ["S09_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Do foxes damage fruit on farms?", "reference_answer": "No", "expected_doc_ids": ["S09_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Do male giraffes weigh more than female giraffes?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Do male giraffes have larger horns than female giraffes?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Are male females generally taller than female giraffes?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Was Henri Becquerel first in his family to occupy the physics chair at the Museum National d'Histoire Naturelle?", "reference_answer": "No", "expected_doc_ids": ["S09_set4_a9.txt"], "difficulty": "hard"}
+{"query": "Was Henri Becquerel the sole winner of the 1903 Nobel Prize in Physics?", "reference_answer": "No", "expected_doc_ids": ["S09_set4_a9.txt"], "difficulty": "hard"}
+{"query": "Did Henri Becquerel intentionally discover radioactivity?", "reference_answer": "He discovered it accidentally", "expected_doc_ids": ["S09_set4_a9.txt"], "difficulty": "hard"}
+{"query": "When did Netwon investigate the refraction of light", "reference_answer": "From 1670 to 1672", "expected_doc_ids": ["S09_set4_a1.txt"], "difficulty": "hard"}
+{"query": "What principles did Newton explain for mechanics?", "reference_answer": "In mechanics, Newton enunciated the principles of conservation of momentum and angular momentum", "expected_doc_ids": ["S09_set4_a1.txt"], "difficulty": "hard"}
+{"query": "Interaction with what man stirred up Newton's interest in alchemy?", "reference_answer": "The contact with the theosophist Henry More, revived his interest in alchemy", "expected_doc_ids": ["S09_set4_a1.txt"], "difficulty": "hard"}
+{"query": "In what year did James travel to Lodon to study instrument-making?", "reference_answer": "1753", "expected_doc_ids": ["S09_set4_a2.txt"], "difficulty": "hard"}
+{"query": "For how many years of James Watt's life was his mother alive?", "reference_answer": "17 years", "expected_doc_ids": ["S09_set4_a2.txt"], "difficulty": "hard"}
+{"query": "What is James Watt most famous for?", "reference_answer": "Steam engine", "expected_doc_ids": ["S09_set4_a2.txt"], "difficulty": "hard"}
+{"query": "Is the National University of San Marcos in Lima?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Has the San Lorenzo Megaport Project been completed?", "reference_answer": "No", "expected_doc_ids": ["S09_set3_a4.txt"], "difficulty": "hard"}
+{"query": "What city in the UK has been subjected to bouts of terrorism?", "reference_answer": "London has been subjected to bouts of terrorism", "expected_doc_ids": ["S09_set3_a1.txt"], "difficulty": "hard"}
+{"query": "What countries did James VI of Scotland unite?", "reference_answer": "James VI of Scotland united Scotland and England", "expected_doc_ids": ["S09_set3_a1.txt"], "difficulty": "hard"}
+{"query": "How did civil wars affect England during the Middle Ages?", "reference_answer": "London remained relatively untouched", "expected_doc_ids": ["S09_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Does a classical lyre have a fingerboard?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Is a guitar played with a plectrum like a lyre?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Who was made to travel outside the coach?", "reference_answer": "Faraday", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Did Faraday construct the ancestor of modern power generators?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Did Faraday lecture on education in 1854?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Does the production of chemical weapons raise an ethical issue?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "What was the Faraday effect first called?", "reference_answer": "diamagnetism", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Can you meet someone through attending a church?", "reference_answer": "yes", "expected_doc_ids": ["S09_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Is Nassau Range the highest mountain range in the world?", "reference_answer": "no", "expected_doc_ids": ["S09_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Is Nassau County named after a German town?", "reference_answer": "yes", "expected_doc_ids": ["S09_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Does the United States have a base near Glasgow?", "reference_answer": "yes", "expected_doc_ids": ["S09_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What type of current did Tesla invent?", "reference_answer": "AC", "expected_doc_ids": ["S09_set4_a3.txt"], "difficulty": "hard"}
+{"query": "Who was the victor of the \"War of Currents\"?", "reference_answer": "Nikola Tesla", "expected_doc_ids": ["S09_set4_a3.txt"], "difficulty": "hard"}
+{"query": "Where did Tesla study electrical engineering?", "reference_answer": "the Austrian Polytechnic in Graz", "expected_doc_ids": ["S09_set4_a3.txt"], "difficulty": "hard"}
+{"query": "What is Ottawa's major league hockey team?", "reference_answer": "the Ottawa Senators", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What are Carleton University's athletic teams called?", "reference_answer": "Carleton Ravens", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Is Ottawa colder than Moscow in January?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What was Ottawa's name in 1850?", "reference_answer": "Bytown", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Based on the average, in what year will the next small tremor occur in Ottawa?", "reference_answer": "2009", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Where were immigrants from in the 1800s?", "reference_answer": "Ireland", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Do otters enjoy playing?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Do sea otters have a layer of fat like whales?", "reference_answer": "No", "expected_doc_ids": ["S09_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Is the otter in the same family as the badger?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a7.txt"], "difficulty": "hard"}
+{"query": "What notable people have been named Santiago?", "reference_answer": "Benito Santiago, Hugo Santiago, Joey Santiago, Liliana Santiago, Rafael Santiago Maria, Santiago Caballero, Santiago Cabrera; James, son of Zebedee", "expected_doc_ids": ["S09_set3_a6.txt"], "difficulty": "hard"}
+{"query": "What fictional stories include a main character named Santiago?", "reference_answer": "Gears of War, Rainbow Six: Covert Operations Essentials, Death Foretold by Gabriel Garc\u00eda M\u00e1rquez, Ernest Hemingway's The Old Man and the Sea, the television series Babylon 5, Anne Rice's novel Interview with the Vampire, aulo Coelho's The Alchemist (novel), the television show Friday Night Lights", "expected_doc_ids": ["S09_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Which album was the song \"The Bonny Swans\" from?", "reference_answer": "The Mask and Mirror", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What is the Polish word for swan?", "reference_answer": "&#321;ab&#281;d&#378;", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Which ballet by Pyotr Tchaikovsky is partially based on an Ancient German legend about a princess who was turned into a swan?", "reference_answer": "Swan Lake", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Are swans and ducks birds of the same family?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What is the name of an adult female?", "reference_answer": "An adult female swan is called a pen", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What is the color of the Australian Black Swan?", "reference_answer": "Completely black except for the white flight feathers on its wings", "expected_doc_ids": ["S09_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Would it be common for tigers to mate in January?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a3.txt"], "difficulty": "hard"}
+{"query": "About how many square kilometers would be needed to house 3 female tigers?", "reference_answer": "60 square kilometers", "expected_doc_ids": ["S09_set1_a3.txt"], "difficulty": "hard"}
+{"query": "Would a tiger be likely to feedon smaller animals, such as mice?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a3.txt"], "difficulty": "hard"}
+{"query": "How do trumpets compensate for wolf tones?", "reference_answer": "Somce trumpetes have a slide mechanism built in to compensate", "expected_doc_ids": ["S09_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Did Miles Davis play the trumpet?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Does a trumpet have a mellower tone than a cornet?", "reference_answer": "No", "expected_doc_ids": ["S09_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Are tortoises land based?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Where are turtle eggs layed?", "reference_answer": "Turtles lay eggs on land", "expected_doc_ids": ["S09_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Is turtle soup considered a delicacy?", "reference_answer": "yes", "expected_doc_ids": ["S09_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Is there a way to approximate the age of a turtle?", "reference_answer": "yes", "expected_doc_ids": ["S09_set1_a9.txt"], "difficulty": "hard"}
+{"query": "Can turtles spend all their time underwater?", "reference_answer": "no", "expected_doc_ids": ["S09_set1_a9.txt"], "difficulty": "hard"}
+{"query": "What are violins made of?", "reference_answer": "different types of wood", "expected_doc_ids": ["S09_set2_a2.txt"], "difficulty": "hard"}
+{"query": "How long have people been making instruments like violins?", "reference_answer": "since ancient times", "expected_doc_ids": ["S09_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Whate is the usual pitch range of a violin?", "reference_answer": "from G3 to C8", "expected_doc_ids": ["S09_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Can a xylophone be 3 octaves?", "reference_answer": "yes", "expected_doc_ids": ["S09_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Can a short bar follow a long bar?", "reference_answer": "no", "expected_doc_ids": ["S09_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Did vibraphones exist in 1930?", "reference_answer": "yes", "expected_doc_ids": ["S09_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Did Alessandro Volta die and retire in the same place?", "reference_answer": "Alessandro Volta retired and died in the same place", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "When did Alessandro Volta improve  and popularize the electrophorus?", "reference_answer": "Alessandro Volta improved and popularized the electrophorus in 1775", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "How long was Alessandro Volta a professor at the University of Pavia?", "reference_answer": "Alessandro Volta was a professor at the University of Pavia for almost 25 years", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "A year before improving and popularizing the electrophorus, what did Volta become?", "reference_answer": "A professor of physics at the Royal School in Como", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "Was Volta buried where he died or was he buried someplace else?", "reference_answer": "where he died", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "Did Volta marry before he became professor of experimental physics at the University of Pavia?", "reference_answer": "no", "expected_doc_ids": ["S10_set4_a10.txt"], "difficulty": "hard"}
+{"query": "In what language was his 1811 paper published?", "reference_answer": "Avogadro's 1811 paper was published in French", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "Who was Avogadro's wife?", "reference_answer": "Felicita Mazz\u00e9 was Avogadro's wife", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "Why did Avogadro lose his chair at the University of Turin?", "reference_answer": "Avogadro lost his chair at the University of Turin because he was active in the revolutionary movements of 1821 against the king of Sardinia", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "What would a German call Avogadro's number?", "reference_answer": "Loschmidt number", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "Is Amedeo Avogadro Italian?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "Did he become a professor before the revolutionary movements against the king of Sardinia?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set4_a8.txt"], "difficulty": "hard"}
+{"query": "Do the ants eat plants, meats, or both?", "reference_answer": "both", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What organs gives a bull ant its good sight?", "reference_answer": "compound eyes", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What may happen to red fire ants if we use boiling water on the queen?", "reference_answer": "nests of red fire ants may be destroyed", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Do ants belong to the same order as bees?", "reference_answer": "Yes, ants belong to the same order as bees", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "What is the most common color of ants?", "reference_answer": "Most ants are red or black", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Do all ants build nests?", "reference_answer": "No, not all ants build nests", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Why is Antwerp important to fashion?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Antwerp is to the east of what river?", "reference_answer": "Antwerp is to the east of the Scheldt river", "expected_doc_ids": ["S10_set3_a4.txt"], "difficulty": "hard"}
+{"query": "How many municipalities does Antwerp have?", "reference_answer": "None, Antwerp is a municipality", "expected_doc_ids": ["S10_set3_a4.txt"], "difficulty": "hard"}
+{"query": "Why is Arabic related to Islam?", "reference_answer": "Arabic is the liturgical language of Islam", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "Why does Arabic heavily influence European languages?", "reference_answer": "Arabic was a major vehicle of culture in Europe, and the Arab and European civilizations are geographically close", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "How do you say \"black\" in Arabic?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "The most active Academies of Arabic Language are found where?", "reference_answer": "damascus and cairo", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "Hassan Massoudy is a master of what genre?", "reference_answer": "Arabic calligraphy", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "Which Berlin building did architect Norman Foster remodel in the 1990s?", "reference_answer": "The Reichstag building was remodeled by architect Norman Foster in the 1990s", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Why is Vattenfall shifting towards reliance on cleaner, renewable energy sources?", "reference_answer": "Because burning lignite produces harmful emissions, Vattenfall has announced a commitment to shift towards reliance on cleaner, renewable energy sources", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "What are the names of the two zoos in Berlin?", "reference_answer": "The two zoos in Berlin are the Zoologischer Garten Berlin and the Tierpark Friedrichsfelde", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Which is the busiest airport in Berlin?", "reference_answer": "Tegel International Airport is the busiest airport in Berlin", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "How many occupation zones was Germany divided into after the war?", "reference_answer": "Germany was divided into four occupation zones after the war", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "Where was Popkomm held before moving to Berlin?", "reference_answer": "Popkomm was held in Cologne before moving to Berlin", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "hard"}
+{"query": "How old was Pascal when he died?", "reference_answer": "1662-08-19", "expected_doc_ids": ["S10_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Did Pascal write about cycloid before 1658?", "reference_answer": "no", "expected_doc_ids": ["S10_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Is there a programming language called Pascal?", "reference_answer": "yes", "expected_doc_ids": ["S10_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Do butterflies carry more pollen than Hymenoptera?", "reference_answer": "No, butterflies carry less pollen than Hymenoptera", "expected_doc_ids": ["S10_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What allows the butterfly to evade predators?", "reference_answer": "A butterfly's hind wings allow the butterfly to evade predators", "expected_doc_ids": ["S10_set1_a6.txt"], "difficulty": "hard"}
+{"query": "What happens if a wing is removed?", "reference_answer": "If a ring is removed the other three will grow to a larger size", "expected_doc_ids": ["S10_set1_a6.txt"], "difficulty": "hard"}
+{"query": "Did Charles-Augustin de Coulomb come from a poor family?", "reference_answer": "No, his mother came from a wealthy family in the wool trade", "expected_doc_ids": ["S10_set4_a6.txt"], "difficulty": "hard"}
+{"query": "What is Coulomb's law?", "reference_answer": "The definition of the electrostatic force of attraction and repulsion", "expected_doc_ids": ["S10_set4_a6.txt"], "difficulty": "hard"}
+{"query": "Where is Coll\u00e8ge des Quatre-Nations located?", "reference_answer": "In Montpellier", "expected_doc_ids": ["S10_set4_a6.txt"], "difficulty": "hard"}
+{"query": "What does the PRC government classify as literacy amongst workers?", "reference_answer": "a knowledge of 2000 characters", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "How is South China linguistically different from North China?", "reference_answer": "South China displays more linguistic diversity", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "&#20415;&#24403;/&#20415;&#30070; \u0093lunchbox or boxed lunch\u0094 (from bento) and &#26009;&#29702; \u0093prepared cuisine\u0094 are loan words from which language?", "reference_answer": "Japanese", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "How is the pronunciation of foreign words determined?", "reference_answer": "The pronunciation of foreign words is done by employing Chinese characters with similar pronuncations", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "What is the total number of Chinese words?", "reference_answer": "The Hanyu Da Zidian includes 54,678 head entries for characters", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "What language was used in the Zhou and Southern Dynasties?", "reference_answer": "Old Chinese was the language common during the early and middle Zhou Dynasty", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "hard"}
+{"query": "What are the three heaviest cats in the world?", "reference_answer": "The three heaviest cats in the world are the tiger, lion and jaguar", "expected_doc_ids": ["S10_set1_a2.txt"], "difficulty": "hard"}
+{"query": "On average, are cougar males heavier than females?", "reference_answer": "On average, cougar males are heavier than females", "expected_doc_ids": ["S10_set1_a2.txt"], "difficulty": "hard"}
+{"query": "What are the three cat species that are native to Canada?", "reference_answer": "The three cat species that are native to Canada are the cougar, the bobcat and the Canadian lynx", "expected_doc_ids": ["S10_set1_a2.txt"], "difficulty": "hard"}
+{"query": "What are cymbals made of?", "reference_answer": "brass", "expected_doc_ids": ["S10_set2_a6.txt"], "difficulty": "hard"}
+{"query": "How many cymbals typically go in a drum kit?", "reference_answer": "at least 3", "expected_doc_ids": ["S10_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What kinds of musical groups use cymbals?", "reference_answer": "Cymbals are used in modern orchestras and many military, marching, concert and other bands", "expected_doc_ids": ["S10_set2_a6.txt"], "difficulty": "hard"}
+{"query": "What is the hobby of seeking out dragonflies and damselflies called?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set1_a7.txt"], "difficulty": "hard"}
+{"query": "In what country are dragonflies used as a food source?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set1_a7.txt"], "difficulty": "hard"}
+{"query": "Which culture has a legend that claims that trolls sent dragonflies to poke out their enemies' eyes?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set1_a7.txt"], "difficulty": "hard"}
+{"query": "How do rock and roll drummers like their drumheads?", "reference_answer": "rock and roll drummer may prefer drums that sound loud and deep", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Whare is the name for drums that have a S10_set of wires held across some of all of the drum heads?", "reference_answer": "snares", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Had the drums been used in Sri Lanka since Before Christ?", "reference_answer": "yes", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Has the design of drums changed recently?", "reference_answer": "no", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Can some cylindrical shell drums have no drum heads?", "reference_answer": "no", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "Does every drumhead make the same sound?", "reference_answer": "no", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "hard"}
+{"query": "What types of fins do eels have?", "reference_answer": "Eels have dorsal and anal fins fused with a tail fin. Some also have  pectoral fins", "expected_doc_ids": ["S10_set1_a8.txt"], "difficulty": "hard"}
+{"query": "What do leptocephali eat?", "reference_answer": "Leptocephali eat small particles called marine snow", "expected_doc_ids": ["S10_set1_a8.txt"], "difficulty": "hard"}
+{"query": "Do all eels live in fresh water?", "reference_answer": "No, not all eels live in fresh water", "expected_doc_ids": ["S10_set1_a8.txt"], "difficulty": "hard"}
+{"query": "For how long has the classification of dialects spoken outside of Finland been a controversial issue?", "reference_answer": "The classification of dialects spoken outside of Finland has been a controversial issue since Finland's independence in 1917", "expected_doc_ids": ["S10_set5_a5.txt"], "difficulty": "hard"}
+{"query": "Who wrote the first novel in Finnish?", "reference_answer": "The first novel in Finnish was published by Aleksis Kivi", "expected_doc_ids": ["S10_set5_a5.txt"], "difficulty": "hard"}
+{"query": "What book defined the official Finnish language?", "reference_answer": "The Dictionary of Contemporary Finnish defined the official Finnish language", "expected_doc_ids": ["S10_set5_a5.txt"], "difficulty": "hard"}
+{"query": "Are Western flutes simpler than Indian flutes?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "Why is a police whistle very wide for its pitch?", "reference_answer": "A flute's volume can generally be increased by making its resonator and tone holes larger", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What are the two main varieties of Indian flutes?", "reference_answer": "The first, the Bansuri. The second, the Venu or Pullanguzhal", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What material is a chi flute fashioned from?", "reference_answer": "lacquered bamboo", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "How does a flute player change the pitch of the sound?", "reference_answer": "by opening and closing holes in the body of the instrument", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What is the most basic form of the flute?", "reference_answer": "a flute can be an open tube which is blown like a bottle", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "hard"}
+{"query": "What foods do pandas eat?", "reference_answer": "bamboo, honeys, eggs, fish, yams, shrub leaves, oranges, and bananas", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "What are the two subspecies of giant pandas?", "reference_answer": "Ailuropoda melanoleuca melanoleuca and The Qinling Panda, Ailuropoda melanoleuca qinlingensis", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "What is panda diplomacy?", "reference_answer": "Loans of Giant Pandas to American and Japanese zoos", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Is the Giant Panda a carnivore?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Why is the Giant Panda an endangered species?", "reference_answer": "It is threatened by continued habitat loss and by a very low birthrate", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Is the population of wild Giant  Pandas growing?", "reference_answer": "according to some reports, yes", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "hard"}
+{"query": "Why are Harp Guitars difficult to classify?", "reference_answer": "as there are many variations within this type of guitar", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "What is the bridge used for?", "reference_answer": "transfer the vibration from the strings to the soundboard", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Which guitars use three single-coil pickups?", "reference_answer": "Fender Stratocaster type guitars", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Why do some people believe that left-handed people should learn to play guitars as right-handed people do?", "reference_answer": "to standardise the instrument", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "How old is the oldest known representation of a guitar-like intrument being played?", "reference_answer": "3,300 years old", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "What is the point called that is bolted or glued to the body of the guitar?", "reference_answer": "Neck joint or 'Heel'", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "When Becquerel discovered radioactivity, whose work did he investigate?", "reference_answer": "Wilhelm Conrad R\u00c3\u00b6ntgen", "expected_doc_ids": ["S10_set4_a9.txt"], "difficulty": "hard"}
+{"query": "Where are there craters named Becquerel?", "reference_answer": "on the moon and on mars", "expected_doc_ids": ["S10_set4_a9.txt"], "difficulty": "hard"}
+{"query": "Why did Bequerel win the Nobel Prize in Physics?", "reference_answer": "discovery of spontaneous radioactivity", "expected_doc_ids": ["S10_set4_a9.txt"], "difficulty": "hard"}
+{"query": "Did the Occult influence Newton's theory of gravitation?", "reference_answer": "If Newton had not relied on the occult idea of action at a distance, he might not have developed his theory of gravity", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "Were Newton's religious views consistent with Anglicanism?", "reference_answer": "No, a conflict between Newton's religious views and Anglican orthodoxy was averted", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "Which fruit inspired Isaac Newton's theory of gravitation?", "reference_answer": "Isaac Newton's theory of gravitation was inspired by watching the fall of an apple from a tree", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "Where was Isaac Newton buried?", "reference_answer": "Westminster Abbey", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "What religion did Isaac Newton follow?", "reference_answer": "he never made a public declaration of his private faith", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "What food gave Isaac Newton clues to his theory of gravity?", "reference_answer": "apple", "expected_doc_ids": ["S10_set4_a1.txt"], "difficulty": "hard"}
+{"query": "Where does the name of the city Jakarta come from?", "reference_answer": "The name Jakarta is derived from the Sanskrit word \"Jayakarta.\"", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "How is the city's governor chosen?", "reference_answer": "Through election", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Why does Jakarta suffer frequent flooding?", "reference_answer": "The fact that the northern part of Jakarta lies on a plain, approximately eight meters above the sea level", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Do mikrolets travel on the main roads?", "reference_answer": "no", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What contributes to frequent flooding in Jakarta", "reference_answer": "Jakarta lies on a plain eight meters, approximately eight meters above the sea level", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Did the economy improve in Jakarta in 2007", "reference_answer": "yes", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Why is the watt named after Watt?", "reference_answer": "The watt is named after James Watt for his contributions to the development of the steam engine", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "Where did Watt attend university?", "reference_answer": "Watt did not attend school regularly", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "What did he invent?", "reference_answer": "He invented a new method of measuring distances by telescope, a device for copying letters, improvements in the oil lamp, a steam mangle and a machine for copying sculptures", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "When did Watt S10_set up his workshop at the University of Glasgow?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "Why did the Glasgow Guild of Hammermen reject Watt's application to become a mathematical instrument maker?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "How old was Watt when he died?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "Why may English translation of Koreans adjectives misleadingly suggest that they are verbs?", "reference_answer": "English does not have an identical grammatical category", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "hard"}
+{"query": "Where do the majority of loanwords other than Sino-Korean come from?", "reference_answer": "modern times, 90% of which are from English", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "hard"}
+{"query": "What percentage of the Korean language does Jeong Jae-do estimate to be Sino-Korean?", "reference_answer": "Sino-Korean makes up 30% of the Korean language", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "hard"}
+{"query": "Do Chinese and Japanese have spaces between words?", "reference_answer": "No, Chinese and Japanese do not have spaces between words", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "hard"}
+{"query": "From which languages is Korean descended?", "reference_answer": "Korean is descended from Old Korean, Middle Korean and Modern Korean", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "hard"}
+{"query": "How long was Kuala Lumpur occupied by the Japanese?", "reference_answer": "42 months", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "How many seasons does Kuala Lumpur experience?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "When were the colonial buildings in Kuala Lumpur constructed?", "reference_answer": "toward the end of the 19th and early 20th centuries", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "Is there a more industrialized region in malaysia?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "after the 2008 elections, what party had the most parliament seats?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "what is the name of the event that draws the worlds top riders to malaysia?", "reference_answer": "KL Grand Prix CSI 5*", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "hard"}
+{"query": "Do lobsters feel pain?", "reference_answer": "yes", "expected_doc_ids": ["S10_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Did the Moche people worship lobsters?", "reference_answer": "yes", "expected_doc_ids": ["S10_set1_a5.txt"], "difficulty": "hard"}
+{"query": "What is the caridoid escape reaction?", "reference_answer": "When lobsters swim backwards quickly by curling and uncurling their abdomen", "expected_doc_ids": ["S10_set1_a5.txt"], "difficulty": "hard"}
+{"query": "Is the foot pedal framework for a piano called a lyre?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Where was the deepest note of the classical lyre in relation to the player's body?", "reference_answer": "It was farthest from the player's body", "expected_doc_ids": ["S10_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Does a standard piano have fewer strings than a harp?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a10.txt"], "difficulty": "hard"}
+{"query": "Are there many words in Malay that use natural gender?", "reference_answer": "No", "expected_doc_ids": ["S10_set5_a2.txt"], "difficulty": "hard"}
+{"query": "How are new words formed in Malay?", "reference_answer": "Affixation, composition, and reduplication", "expected_doc_ids": ["S10_set5_a2.txt"], "difficulty": "hard"}
+{"query": "Do linguists consider Malay to be a single language?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set5_a2.txt"], "difficulty": "hard"}
+{"query": "Can speakers of modern Malay understand Old Malay?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set5_a2.txt"], "difficulty": "hard"}
+{"query": "What language besides Malay is in the Austronesia language family?", "reference_answer": "Malagasy", "expected_doc_ids": ["S10_set5_a2.txt"], "difficulty": "hard"}
+{"query": "Where is Melbourne situated?", "reference_answer": "boundary of the very hot inland areas and the cold southern ocean", "expected_doc_ids": ["S10_set3_a2.txt"], "difficulty": "hard"}
+{"query": "How many domestic tourists visit Melbourne?", "reference_answer": "7.6 million domestic visitors", "expected_doc_ids": ["S10_set3_a2.txt"], "difficulty": "hard"}
+{"query": "What religion holds majority in Melbourne?", "reference_answer": "Christianity", "expected_doc_ids": ["S10_set3_a2.txt"], "difficulty": "hard"}
+{"query": "Did Faraday discover diamagnetism?", "reference_answer": "Yes, Faraday discovered diamagnetism", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "How many siblings did Faraday have?", "reference_answer": "Faraday had three siblings", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "Where is Michael Faraday buried?", "reference_answer": "Michael Faraday is buried in the dissenters' section of Highgate Cemetery", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "did he advise the british government on the production of chemical weapons for use in the crimean war?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "did faraday have strong maritime interests?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "does the charge reside on the interior of a charged conductor?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a7.txt"], "difficulty": "hard"}
+{"query": "What are the designs and decorations of the Montreal Metro System said to be?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Mount Royal Park's wooden design was created by what famous designer?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "The majority of The Greater Montreal Area follows what religion?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Where was much of Montreal's industry during the late 19th and early-to-mid 20th century?", "reference_answer": "The Sud-Ouest borough was home to much of the city's industry during the late 19th and early-to-mid 20th century", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "Does Montreal contain the largest church in Canada?", "reference_answer": "Yes, Montreal contains the largest church in Canada", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "What is the largest primarily French-speaking city in the western world?", "reference_answer": "Paris is the largest primarily French-speaking city in the western world", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "hard"}
+{"query": "How many civilians died in the 1998 U.S. embassy bombing?", "reference_answer": "Over two hundred", "expected_doc_ids": ["S10_set3_a9.txt"], "difficulty": "hard"}
+{"query": "How many trades can the NSE make per day?", "reference_answer": "10 million trades", "expected_doc_ids": ["S10_set3_a9.txt"], "difficulty": "hard"}
+{"query": "About how many people are estimated to live in Nairobi?", "reference_answer": "3 million", "expected_doc_ids": ["S10_set3_a9.txt"], "difficulty": "hard"}
+{"query": "Was Nikola Tesla's mother illiterate?", "reference_answer": "Nikola Tesla's mother never learned to read", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "How many siblings did Nikola Tesla have?", "reference_answer": "Nikola Tesla had four siblings", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "Was Nikola Tesla a vegetarian?", "reference_answer": "In his later years Tesla became a vegetarian", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "Did Tesla win the Nobel Prize?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "Was Tesla rich at the time of his death?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "What music group was named after Tesla?", "reference_answer": "Tesla", "expected_doc_ids": ["S10_set4_a3.txt"], "difficulty": "hard"}
+{"query": "What is the range of lifespans of the octopus?", "reference_answer": "Octopuses can live from six months to five years", "expected_doc_ids": ["S10_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What is an example of something an octopus learned in a research experiment?", "reference_answer": "In research experiments, octopus can be trained to distinguish between different shapes and patterns", "expected_doc_ids": ["S10_set1_a10.txt"], "difficulty": "hard"}
+{"query": "How can an octopus defend against predators?", "reference_answer": "To defend against predators, an octopus can hide, flee quickly, expel ink, or use color-changing camouflage", "expected_doc_ids": ["S10_set1_a10.txt"], "difficulty": "hard"}
+{"query": "Where is Irving Berlin's piano located?", "reference_answer": "In the Smithsonian Museum", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What kind of piano did Irving Berlin play?", "reference_answer": "The transposing piano", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "hard"}
+{"query": "Why are upright pianos more compact?", "reference_answer": "Upright pianos are more compact because the frame and strings are vertical", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "hard"}
+{"query": "Do older pianos have more keys than modern pianos?", "reference_answer": "Many older pianos only have 85 keys", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "hard"}
+{"query": "What are the names of a piano's pedals?", "reference_answer": "The names of a piano's pedals are una corda, sostenuto, and damper", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "hard"}
+{"query": "Which government established Portuguese as it's third official language in order to meet the requirements to apply for full membership in the CPLP?", "reference_answer": "The government of Equatorial Guinea established Portuguese as its third official language in order to meet the requirements to apply for full membership in the CPLP", "expected_doc_ids": ["S10_set5_a1.txt"], "difficulty": "hard"}
+{"query": "By 2050, what will the total population of Portuguese speakers in the world be?", "reference_answer": "By 2050, Portuguese-speaking countries will have a total population of 335 million people", "expected_doc_ids": ["S10_set5_a1.txt"], "difficulty": "hard"}
+{"query": "In which country is Portuguese the co-official language with Cantonese Chinese?", "reference_answer": "Portuguese is the co-official language with Cantonese Chinese in Macau", "expected_doc_ids": ["S10_set5_a1.txt"], "difficulty": "hard"}
+{"query": "What was made in Russia's largest foundry?", "reference_answer": "thousands of sculptures and statues", "expected_doc_ids": ["S10_set3_a10.txt"], "difficulty": "hard"}
+{"query": "When did the crime level become higher?", "reference_answer": "After the October revolution", "expected_doc_ids": ["S10_set3_a10.txt"], "difficulty": "hard"}
+{"query": "How to travel to work from the city to Moscow?", "reference_answer": "One way is through the Moscow-Saint Petersburg Railway", "expected_doc_ids": ["S10_set3_a10.txt"], "difficulty": "hard"}
+{"query": "What is the cause of local earthquakes?", "reference_answer": "It was the San Andreas Fault which slipped and caused the earthquakes in 1906 and 1989", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Are more residents employed by small businesses than in 1977?", "reference_answer": "The number of San Franciscans employed by firms of more than 1,000 employees has fallen by half since 1977", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "How does poverty in San Francisco compare to the nation-wide average?", "reference_answer": "The city's poverty rate is 11.8% and the number of families in poverty stands at 7.4%, both lower than the national average", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Is Crissy field an airfield", "reference_answer": "Yes", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "Does the de Young museum house the Asian Art Museum", "reference_answer": "yes", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "What prompted the city to upgrade its building codes", "reference_answer": "The threat of major earthquakes", "expected_doc_ids": ["S10_set3_a8.txt"], "difficulty": "hard"}
+{"query": "How many noun classes does Swahili have?", "reference_answer": "Swahili has sixteen noun classes", "expected_doc_ids": ["S10_set5_a4.txt"], "difficulty": "hard"}
+{"query": "In what year did Germany seize Tanganyika?", "reference_answer": "Germany seized Tanganyika in 1886", "expected_doc_ids": ["S10_set5_a4.txt"], "difficulty": "hard"}
+{"query": "Which is the sub-Saharan indigenous language with the greatest number of speakers?", "reference_answer": "Hausa of West Africa is the sub-Saharan indigenous language with the greatest number of speakers", "expected_doc_ids": ["S10_set5_a4.txt"], "difficulty": "hard"}
+{"query": "When did the Soviet military forces occupy Estonia?", "reference_answer": "In 1944", "expected_doc_ids": ["S10_set5_a9.txt"], "difficulty": "hard"}
+{"query": "What are the differences between English and Swedish pronouns?", "reference_answer": "Swedish pronouns are basically the same as those of English but distinguish two genders and have an additional object form, derived from the old dative form, as well as a distinct genitive case", "expected_doc_ids": ["S10_set5_a9.txt"], "difficulty": "hard"}
+{"query": "How does Swedish language counterbalance the absence of cases?", "reference_answer": "The lack of cases in Swedish is compensated by a wide variety of prepositions", "expected_doc_ids": ["S10_set5_a9.txt"], "difficulty": "hard"}
+{"query": "When is the Pacific typhoon season?", "reference_answer": "It's between June and October", "expected_doc_ids": ["S10_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Who S10_sets up shrines?", "reference_answer": "Many homes and businesses would S10_set up shrines", "expected_doc_ids": ["S10_set3_a6.txt"], "difficulty": "hard"}
+{"query": "What does Taipei produce?", "reference_answer": "Taipei produces textiles, apparel, electronics, machinery, printed materials, precision equipment, food, and beverages", "expected_doc_ids": ["S10_set3_a6.txt"], "difficulty": "hard"}
+{"query": "Why do trumpets have a bright, loud sound?", "reference_answer": "The trumpet and trombone share a roughly cylindrical bore", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Why does the cornet have a slightly mellower tone than the trumpet?", "reference_answer": "The cornet and flugelhorn have conical bores", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What makes a trumpet fully chromatic?", "reference_answer": "able to play all twelve pitches of Western music", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What can be augmented with a fourth valve?", "reference_answer": "the flugelhorn", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What was Maynard Ferguson noted for being able to play accurately?", "reference_answer": "yes", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "What was built to play in both B and A keys?", "reference_answer": "piccolo trumpets", "expected_doc_ids": ["S10_set2_a3.txt"], "difficulty": "hard"}
+{"query": "Who were the Orkhon inscriptions built for?", "reference_answer": "The Orkhon inscriptions were erected in honour of the prince Kul Tigin and his brother Emperor Bilge Khan", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "What was one of the results of the introduction of the new Turkish alphabet?", "reference_answer": "There was a dramatic increase in literacy from its original Third World levels", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "Why does Lewis use \"absolute case\" instead of \"nominative\"?", "reference_answer": "Because it is also used for the indefinite accusative", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "Who is working to coin new Turkish word?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "What are the patterns of vowel harmony?", "reference_answer": "Vowels are characterised by two features: front/back and rounded/unrounded", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "What are the ways to join groups of nouns?", "reference_answer": "Two nouns, or groups of nouns, may be joined in either of two ways: definite or indefinite", "expected_doc_ids": ["S10_set5_a8.txt"], "difficulty": "hard"}
+{"query": "Is the Red River Delta traditionally poor?", "reference_answer": "Not compared to Nghe An, Ha Tinh, or Quang Binh", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "What kind of words have been borrowed from Chinese?", "reference_answer": "Words that denote abstract ideas in the same way European languages borrow form Latin and Greek", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "Is Vietnam independent from France?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "Does Vietnamese borrow from Latin and Greek?", "reference_answer": "No, Vietnamese does not borrow from Latin and Greek", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "Did Vietnamese come to predominate politically in 2nd century BC?", "reference_answer": "No, Chinese came to predominate politically in the 2nd century B.C", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "Do more northern speakers speak the southern regional dialect than southern speakers speak the northern dialect?", "reference_answer": "More southern speakers speak the northern dialect than northerners speak the suthern dialect", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "hard"}
+{"query": "What is a person that makes or repairs violins called?", "reference_answer": "A luthier, or simply a violin maker", "expected_doc_ids": ["S10_set2_a2.txt"], "difficulty": "hard"}
+{"query": "What does the \"voice\" of a violin depend upon?", "reference_answer": "Its shape", "expected_doc_ids": ["S10_set2_a2.txt"], "difficulty": "hard"}
+{"query": "Is the violin a percussion instrument?", "reference_answer": "Yes", "expected_doc_ids": ["S10_set2_a2.txt"], "difficulty": "hard"}
+{"query": "What instrument was produced after the xylophone in the 1920s?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "In Central and South America, what instrument was the xylophone changed into?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "The word xylophone is derived from two greek words: xylon and phone. What do these words mean?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Which came first, the xylophone or the vibraphone?", "reference_answer": "The xylophone", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Did the golden age of xylophones come before or after the first usage of the European-derived orchestral?", "reference_answer": "after", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "Does kelon increase or decrease tone quality of the xylophone?", "reference_answer": "Decrease", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "What areas do the Grevy's Zebras inhabit?", "reference_answer": "semi-arid grasslands of Ethiopia and northern Kenya", "expected_doc_ids": ["S10_set1_a9.txt"], "difficulty": "hard"}
+{"query": "Which species of zebra is known as the common zebra?", "reference_answer": "Plains Zebra (Equus quagga, formerly Equus burchelli)", "expected_doc_ids": ["S10_set1_a9.txt"], "difficulty": "hard"}
+{"query": "At what age can a zebra breed?", "reference_answer": "five or six", "expected_doc_ids": ["S10_set1_a9.txt"], "difficulty": "hard"}

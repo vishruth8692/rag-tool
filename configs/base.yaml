@@ -1,0 +1,64 @@
+project:
+  name: rag-tool
+
+paths:
+  data_dir: data
+  raw_docs_dir: artifacts/raw
+  index_dir: artifacts/index
+  eval_reports_dir: eval/reports
+
+chunking:
+  strategy: fixed  # fixed | sentence | paragraph | semantic
+  chunk_size_words: 180
+  chunk_overlap_words: 30
+
+embedding:
+  provider: sentence-transformers  # sentence-transformers | openai
+  model: sentence-transformers/all-MiniLM-L6-v2
+  sentence_transformers:
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+  openai:
+    model: text-embedding-3-small
+    api_key_env: OPENAI_API_KEY
+    base_url: https://api.openai.com/v1
+    timeout: 60
+
+retrieval:
+  top_k: 4
+
+generation:
+  provider: simple  # simple | ollama | openai | huggingface
+  max_context_chunks: 3
+  fallback_to_simple: true
+  ollama:
+    model: llama3.1:8b
+    base_url: http://localhost:11434
+    temperature: 0.1
+    timeout: 120
+  openai:
+    model: gpt-4o-mini
+    api_key_env: OPENAI_API_KEY
+    base_url: https://api.openai.com/v1
+    temperature: 0.1
+    timeout: 90
+  huggingface:
+    model: mistralai/Mistral-7B-Instruct-v0.2
+    api_key_env: HF_API_TOKEN
+    temperature: 0.1
+    max_new_tokens: 280
+    timeout: 120
+
+safety:
+  low_confidence_threshold: 0.35
+
+# CSV ingestion settings — only applies when data_dir contains .csv files
+# csv_format options:
+#   raw       — treat entire CSV as plain text (old behaviour)
+#   qa_pairs  — each row is one Q+A chunk (structured Q&A dataset)
+#   single_col — each cell in one column is one chunk (e.g. single "text" column)
+data:
+  csv_format: raw           # raw | qa_pairs | single_col
+  question_column: "0"      # column name (header) or 0-based index — used when csv_format=qa_pairs
+  answer_column: "1"        # column name (header) or 0-based index — used when csv_format=qa_pairs
+  text_column: "0"          # column name or index — used when csv_format=single_col
+  pairs_per_chunk: 1        # how many Q+A rows to group into one chunk (qa_pairs only)

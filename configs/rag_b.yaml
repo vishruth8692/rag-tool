@@ -1,0 +1,14 @@
+project:
+  name: rag-tool-b
+
+extends: base.yaml
+
+chunking:
+  chunk_size_words: 120
+  chunk_overlap_words: 20
+
+retrieval:
+  top_k: 6
+
+generation:
+  provider: simple

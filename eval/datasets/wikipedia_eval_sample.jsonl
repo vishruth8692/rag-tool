@@ -1,0 +1,80 @@
+{"query": "Is Ottawa the capital of Canada?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "easy"}
+{"query": "What is the definition of the electrostatic force of attraction and repulsion?", "reference_answer": "Coulomb's law is the definition of the electrostatic force of attraction and repulsion", "expected_doc_ids": ["S09_set4_a6.txt"], "difficulty": "hard"}
+{"query": "Is the purfling just for decoration?", "reference_answer": "No", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "easy"}
+{"query": "What is the bridge used for?", "reference_answer": "transfer the vibration from the strings to the soundboard", "expected_doc_ids": ["S10_set2_a7.txt"], "difficulty": "hard"}
+{"query": "Is Kuala Lumpur in the Selangor state?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a3.txt"], "difficulty": "easy"}
+{"query": "Where do Giant Pandas live?", "reference_answer": "Sichuan province, Shaanxi and Gansu provinces", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "medium"}
+{"query": "Did Singapore's standard of living decrease since independence?", "reference_answer": "No, the standard living was raised", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "easy"}
+{"query": "What did he invent?", "reference_answer": "He invented a new method of measuring distances by telescope, a device for copying letters, improvements in the oil lamp, a steam mangle and a machine for copying sculptures", "expected_doc_ids": ["S10_set4_a2.txt"], "difficulty": "hard"}
+{"query": "Of whose continual poor health was the cause never precisely determined?", "reference_answer": "Blaise Pascal", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "hard"}
+{"query": "Did the modern hi-hat evolve from clash cymbals?", "reference_answer": "yes", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "easy"}
+{"query": "Is Canada a member of the OECD?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "easy"}
+{"query": "Is Canada bilingual?", "reference_answer": "Yes, it is", "expected_doc_ids": ["S08_set2_a8.txt"], "difficulty": "easy"}
+{"query": "Who constructed a kit using diatonic and chromatically tuned drums?", "reference_answer": "Terry Bozzio", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "medium"}
+{"query": "Do open-ended flutes have brighter timbres?", "reference_answer": "yes", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "medium"}
+{"query": "Could Blaise Pascal move without crutches?", "reference_answer": "He could move without crutches until a paralytic attack in 1647", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "easy"}
+{"query": "How does a trumpet produce sound?", "reference_answer": "By blowing air through closed lips", "expected_doc_ids": ["S09_set2_a3.txt"], "difficulty": "medium"}
+{"query": "Does the Gendarmenmarkt border the French Cathedral?", "reference_answer": "Yes, the Gendarmenmarkt borders the French Cathedral", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "easy"}
+{"query": "How long may elephants live?", "reference_answer": "As long as 70 years, sometimes longer", "expected_doc_ids": ["S08_set1_a5.txt"], "difficulty": "medium"}
+{"query": "What is the largest living species of penguin?", "reference_answer": "the Emperor Penguin (Aptenodytes forsteri)", "expected_doc_ids": ["S08_set1_a3.txt"], "difficulty": "easy"}
+{"query": "Do mikrolets travel on the main roads?", "reference_answer": "no", "expected_doc_ids": ["S10_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What is Ottawa's population?", "reference_answer": "1,190,982", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "medium"}
+{"query": "Which harmonics can produce any notes above middle C?", "reference_answer": "Artificial harmonics can produce any notes above middle C", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "hard"}
+{"query": "Did the Mughals arrive in Dhaka?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set3_a3.txt"], "difficulty": "hard"}
+{"query": "What is the second biggest factor affecting the sound produced by a drum?", "reference_answer": "the tension at which the drum head is held against the shell of the drum", "expected_doc_ids": ["S10_set2_a4.txt"], "difficulty": "medium"}
+{"query": "Is Berlin the capital city of Germany?", "reference_answer": "Berlin is the capital city of Germany", "expected_doc_ids": ["S10_set3_a1.txt"], "difficulty": "easy"}
+{"query": "Do all ducks \"quack\"?", "reference_answer": "No", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "easy"}
+{"query": "Is Ottawa on a river?", "reference_answer": "yes", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "easy"}
+{"query": "To what genus does the gray wolf belong?", "reference_answer": "Canis", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "medium"}
+{"query": "Do giraffes give birth standing up?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set1_a5.txt"], "difficulty": "easy"}
+{"query": "What is the Order of Santiago?", "reference_answer": "a Spanish knightly order", "expected_doc_ids": ["S09_set3_a6.txt"], "difficulty": "medium"}
+{"query": "Did Ford need to do extra work to pay for college?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a10.txt"], "difficulty": "hard"}
+{"query": "What is Finland's economy like?", "reference_answer": "a highly industrialised, free-market economy", "expected_doc_ids": ["S08_set2_a4.txt"], "difficulty": "hard"}
+{"query": "When did Tesla demonstrate wireless communication (radio)?", "reference_answer": "1893", "expected_doc_ids": ["S09_set4_a3.txt"], "difficulty": "medium"}
+{"query": "What was Roosevelt's justification for supporting desegregation of schools in New York?", "reference_answer": "Noting that his children had been educated with other races and there was nothing wrong with it", "expected_doc_ids": ["S08_set3_a7.txt"], "difficulty": "hard"}
+{"query": "How many subspecies of the Giant Panda are there?", "reference_answer": "Two", "expected_doc_ids": ["S10_set1_a4.txt"], "difficulty": "medium"}
+{"query": "Why are relations with Malaysia and Indonesia important?", "reference_answer": "Due to obvious geographical reasons, relations with Malaysia and Indonesia are most important", "expected_doc_ids": ["S08_set2_a2.txt"], "difficulty": "medium"}
+{"query": "How to travel to work from the city to Moscow?", "reference_answer": "One way is through the Moscow-Saint Petersburg Railway", "expected_doc_ids": ["S10_set3_a10.txt"], "difficulty": "hard"}
+{"query": "How often do turtles breed?", "reference_answer": "Every few years or more", "expected_doc_ids": ["S08_set1_a9.txt"], "difficulty": "medium"}
+{"query": "Is there cello in performances by Rihanna?", "reference_answer": "yes", "expected_doc_ids": ["S09_set2_a9.txt"], "difficulty": "easy"}
+{"query": "When do wolves molt?", "reference_answer": "Late Spring or Early Summer", "expected_doc_ids": ["S08_set1_a6.txt"], "difficulty": "medium"}
+{"query": "Do scholars rank lincoln among the top three presidents?", "reference_answer": "NULL", "expected_doc_ids": ["S08_set3_a4.txt"], "difficulty": "easy"}
+{"query": "How many regions is Ghana divided into?", "reference_answer": "10", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "medium"}
+{"query": "What is the most common color of ants?", "reference_answer": "Most ants are red or black", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "How many total keys does a typical modern piano have?", "reference_answer": "A modern piano has 88 keys", "expected_doc_ids": ["S10_set2_a1.txt"], "difficulty": "medium"}
+{"query": "When did John Adams serve as Vice President?", "reference_answer": "1789-1797", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "medium"}
+{"query": "Did the Japanese invasion and subsequent occupation during WWII end Dutch rule?", "reference_answer": "yes", "expected_doc_ids": ["S08_set2_a10.txt"], "difficulty": "easy"}
+{"query": "In Central and South America, what instrument was the xylophone changed into?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set2_a8.txt"], "difficulty": "hard"}
+{"query": "How many laws of motion did Netwon have?", "reference_answer": "Three", "expected_doc_ids": ["S09_set4_a1.txt"], "difficulty": "medium"}
+{"query": "Is the leopard smaller than the other members of Panthera?", "reference_answer": "yes", "expected_doc_ids": ["S08_set1_a2.txt"], "difficulty": "easy"}
+{"query": "What is The Remarkable Millard Fillmore?", "reference_answer": "In 2007, George Pendle wrote The Remarkable Millard Fillmore, a fake biography based on real events that happened in Fillmore's life", "expected_doc_ids": ["S08_set3_a3.txt"], "difficulty": "medium"}
+{"query": "Did Wilson's father own slaves?", "reference_answer": "Yeah", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "easy"}
+{"query": "Do ants belong to the same order as bees?", "reference_answer": "Yes, ants belong to the same order as bees", "expected_doc_ids": ["S10_set1_a1.txt"], "difficulty": "hard"}
+{"query": "Did John Adams represent the Continental Congress in Europe?", "reference_answer": "Yes", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "easy"}
+{"query": "What does the word Ghana mean?", "reference_answer": "warrior king", "expected_doc_ids": ["S08_set2_a5.txt"], "difficulty": "medium"}
+{"query": "From what did Pascal suffer throughout his life?", "reference_answer": "poor health", "expected_doc_ids": ["S09_set4_a4.txt"], "difficulty": "medium"}
+{"query": "Does Romania share a border with Ukraine?", "reference_answer": "yes", "expected_doc_ids": ["S08_set2_a7.txt"], "difficulty": "easy"}
+{"query": "Was Charles-Augustin de Coulomb a member of the National Institute?", "reference_answer": "Yes", "expected_doc_ids": ["S09_set4_a6.txt"], "difficulty": "easy"}
+{"query": "Approximately how many species of Testudines are alive today?", "reference_answer": "300", "expected_doc_ids": ["S09_set1_a9.txt"], "difficulty": "medium"}
+{"query": "Did James Monroe attend the College of William and Mary?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "easy"}
+{"query": "What part of the cymbal gets the best \"crash\"?", "reference_answer": "Edge or rim", "expected_doc_ids": ["S09_set2_a6.txt"], "difficulty": "medium"}
+{"query": "How many arms does an octopus have?", "reference_answer": "The octopus has four pairs of arms", "expected_doc_ids": ["S10_set1_a10.txt"], "difficulty": "medium"}
+{"query": "Are ducks in the Arctic Northern Hemisphere migratory?", "reference_answer": "Some are", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "easy"}
+{"query": "Where is Wilson buried?", "reference_answer": "He was buried in Washington National Cathedral", "expected_doc_ids": ["S08_set3_a8.txt"], "difficulty": "medium"}
+{"query": "Does Montreal lie at the confluence of several climatic regions?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set3_a7.txt"], "difficulty": "easy"}
+{"query": "Does Vietnamese have dipthongs?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set5_a10.txt"], "difficulty": "easy"}
+{"query": "Is Adams' birthplace part of a national park?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a1.txt"], "difficulty": "easy"}
+{"query": "Did James Monroe fight in the Continental Army?", "reference_answer": "yes", "expected_doc_ids": ["S08_set3_a2.txt"], "difficulty": "easy"}
+{"query": "What was Ottawa's name in 1850?", "reference_answer": "Bytown", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "Hassan Massoudy is a master of what genre?", "reference_answer": "Arabic calligraphy", "expected_doc_ids": ["S10_set5_a3.txt"], "difficulty": "hard"}
+{"query": "By 2050, what will the total population of Portuguese speakers in the world be?", "reference_answer": "By 2050, Portuguese-speaking countries will have a total population of 335 million people", "expected_doc_ids": ["S10_set5_a1.txt"], "difficulty": "hard"}
+{"query": "Has the flute been dated to prehistoric times?", "reference_answer": "yes", "expected_doc_ids": ["S10_set2_a5.txt"], "difficulty": "easy"}
+{"query": "When was a three-holed flute made from a mammoth tusk discovered?", "reference_answer": "In 2004", "expected_doc_ids": ["S09_set2_a5.txt"], "difficulty": "medium"}
+{"query": "Where is smoked eel considered a delicacy?", "reference_answer": "Smoked eel is considered a delicacy in northern Germany, The Netherlands, Denmark and Sweden", "expected_doc_ids": ["S10_set1_a8.txt"], "difficulty": "medium"}
+{"query": "What are dragonfly larvae known as?", "reference_answer": "NULL", "expected_doc_ids": ["S10_set1_a7.txt"], "difficulty": "medium"}
+{"query": "Do female polar bears weight more than the male?", "reference_answer": "no", "expected_doc_ids": ["S08_set1_a4.txt"], "difficulty": "hard"}
+{"query": "What are the reasons for hunting wild ducks?", "reference_answer": "Meat, eggs, and feathers", "expected_doc_ids": ["S08_set1_a10.txt"], "difficulty": "hard"}
+{"query": "What are Carleton University's athletic teams called?", "reference_answer": "Carleton Ravens", "expected_doc_ids": ["S09_set3_a5.txt"], "difficulty": "hard"}
+{"query": "What is the official standard language used by the People's Republic of China, the Republic of China, and Singapore (where it is called \"Huayu\")?", "reference_answer": "Putonghua / Guoyu, often called \"Mandarin\"", "expected_doc_ids": ["S10_set5_a7.txt"], "difficulty": "medium"}
+{"query": "How many parts of speech does the Korean language contain?", "reference_answer": "The Korean Language contains nine parts of speech", "expected_doc_ids": ["S10_set5_a6.txt"], "difficulty": "easy"}
+{"query": "What countries border Egypt?", "reference_answer": "Libya, Sudan, the Gaza Strip and Israel", "expected_doc_ids": ["S08_set2_a6.txt"], "difficulty": "medium"}

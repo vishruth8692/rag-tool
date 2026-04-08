@@ -1,0 +1,10 @@
+project:
+  name: rag-tool-a
+
+extends: base.yaml
+
+retrieval:
+  top_k: 3
+
+generation:
+  provider: simple
