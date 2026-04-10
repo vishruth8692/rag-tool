@@ -1,0 +1,14 @@
+extends: base.yaml
+
+chunking:
+  strategy: fixed
+  chunk_size_words: 180
+  chunk_overlap_words: 30
+
+embedding:
+  provider: sentence-transformers
+  sentence_transformers:
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+
+generation:
+  provider: simple

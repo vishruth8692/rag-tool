@@ -1,0 +1,13 @@
+extends: base.yaml
+
+chunking:
+  strategy: paragraph
+  chunk_size_words: 180
+
+embedding:
+  provider: sentence-transformers
+  sentence_transformers:
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+
+generation:
+  provider: simple

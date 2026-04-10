@@ -362,6 +362,51 @@ Results include:
 
 ---
 
+---
+
+## Benchmark Results
+
+Measured on the included **Wikipedia eval dataset** (hard split, 200 queries sampled, `simple` generation).
+All runs use `top_k=4`. Reproduce with: `python3 scripts/run_benchmarks.py`
+
+### Experiment 1 — Chunking strategy: fixed vs paragraph
+
+Same embedding model (`all-MiniLM-L6-v2`), different chunking strategy.
+
+| Chunking | Recall@4 | MRR | Latency |
+|---|---|---|---|
+| `fixed` (180 words, 30 overlap) | 0.945 | 0.825 | 82 ms |
+| `paragraph` (natural boundaries) | **0.950** | 0.818 | 149 ms |
+
+**Takeaway:** Paragraph chunking gives a small Recall lift (+0.5%) on Wikipedia-style text where natural paragraphs carry complete ideas. Fixed is faster (82ms vs 149ms) because it produces fewer chunks — a worthwhile trade-off when speed matters more than marginal accuracy.
+
+---
+
+### Experiment 2 — Embedding model comparison (paragraph chunking)
+
+Same chunking strategy (`paragraph`), different embedding models.
+
+| Embedding Model | Recall@4 | MRR | Latency | Notes |
+|---|---|---|---|---|
+| `all-MiniLM-L6-v2` | 0.950 | 0.818 | 149 ms | Default — fast general-purpose |
+| `BAAI/bge-small-en-v1.5` | **0.965** | **0.836** | 156 ms | Best overall — MTEB-optimised |
+| `multi-qa-MiniLM-L6-cos-v1` | 0.935 | 0.794 | 150 ms | Q&A trained — weaker on Wikipedia prose |
+
+**Takeaway:** `bge-small-en-v1.5` is the best performing model on this dataset, gaining +1.5% Recall and +1.8% MRR over the default with almost no latency cost. `multi-qa-MiniLM` is trained for direct Q&A matching — it excels on FAQ-style data but underperforms on Wikipedia-style paragraphs.
+
+---
+
+### How to reproduce
+
+```bash
+# Runs all 4 configs and prints a markdown table
+python3 scripts/run_benchmarks.py
+```
+
+Or use the dashboard → **A/B Compare** mode to compare any two configs side by side with statistical significance.
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
