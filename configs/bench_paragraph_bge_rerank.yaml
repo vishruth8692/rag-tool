@@ -1,0 +1,18 @@
+extends: base.yaml
+
+chunking:
+  strategy: paragraph
+  chunk_size_words: 180
+
+embedding:
+  provider: sentence-transformers
+  sentence_transformers:
+    model_name: BAAI/bge-small-en-v1.5
+
+retrieval:
+  top_k: 4
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+  rerank_candidates: 20
+
+generation:
+  provider: simple

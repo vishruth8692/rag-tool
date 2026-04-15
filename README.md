@@ -396,10 +396,45 @@ Same chunking strategy (`paragraph`), different embedding models.
 
 ---
 
+### Experiment 3 — Re-ranking (two-stage retrieval)
+
+Best base config from Experiment 2 (`paragraph` + `bge-small-en-v1.5`), with and without a cross-encoder re-ranker.
+
+How it works:
+- **Without re-ranking:** bi-encoder → fetch top 4
+- **With re-ranking:** bi-encoder → fetch top 20 candidates → cross-encoder re-scores all 20 → return top 4
+
+| Config | Recall@4 | MRR | Latency |
+|---|---|---|---|
+| paragraph + bge-small *(no rerank)* | 0.965 | 0.836 | 158 ms |
+| paragraph + bge-small + **ms-marco reranker** | **0.980** | **0.843** | 391 ms |
+
+**Takeaway:** Re-ranking adds +1.5% Recall and +0.7% MRR at the cost of 2.5× latency (158ms → 391ms). The cross-encoder reads query and document together through full transformer attention, catching relevance signals the bi-encoder misses. Worth enabling in production if your latency budget allows it.
+
+To enable in `configs/base.yaml`:
+```yaml
+retrieval:
+  top_k: 4
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+  rerank_candidates: 20
+```
+
+### Summary — best configuration
+
+| Metric | Best config | Value |
+|---|---|---|
+| Recall@4 | paragraph + bge-small + reranker | **0.980** |
+| MRR | paragraph + bge-small + reranker | **0.843** |
+| Speed (no reranker) | fixed + all-MiniLM | **82 ms** |
+
+**Recommended starting point:** `paragraph` chunking + `bge-small-en-v1.5` embedding. Add the re-ranker when you have latency headroom.
+
+---
+
 ### How to reproduce
 
 ```bash
-# Runs all 4 configs and prints a markdown table
+# Runs all benchmark configs and prints a markdown table
 python3 scripts/run_benchmarks.py
 ```
 

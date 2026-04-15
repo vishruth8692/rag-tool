@@ -695,16 +695,84 @@ def _config_editor(title: str, cfg: dict, key_prefix: str) -> dict:
 
     # ── Section 3: Retrieval ──────────────────────────────────────────────────
     st.markdown("**Retrieval**")
+    retrieval_cfg = cfg.get("retrieval", {})
+
     top_k = int(
         st.number_input(
-            "Top K — chunks retrieved per query",
+            "Top K — chunks returned to LLM",
             min_value=1,
-            value=int(cfg.get("retrieval", {}).get("top_k", 4)),
+            value=int(retrieval_cfg.get("top_k", 4)),
             step=1,
             key=f"{key_prefix}_top_k",
-            help="How many chunks are retrieved and passed to generation. Higher = more context but slower and noisier. Typically 3–6.",
+            help="How many chunks are passed to generation. Higher = more context but slower and noisier. Typically 3–6.",
         )
     )
+
+    st.markdown("**Re-ranking** *(optional — improves MRR)*")
+    st.caption(
+        "Re-ranking runs a second, more accurate model on the top candidates after the "
+        "initial vector search. It improves ranking precision (MRR) at the cost of "
+        "~50–150ms extra latency. Best free model: `BAAI/bge-reranker-base`."
+    )
+
+    _RERANKER_PRESETS = [
+        "None — disabled",
+        "cross-encoder/ms-marco-MiniLM-L-6-v2  (22MB · fast)",
+        "cross-encoder/ms-marco-MiniLM-L-12-v2  (66MB · better quality)",
+        "BAAI/bge-reranker-base  (110MB · best free option)",
+        "Custom...",
+    ]
+    _RERANKER_MODEL_MAP = {
+        "None — disabled": None,
+        "cross-encoder/ms-marco-MiniLM-L-6-v2  (22MB · fast)": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "cross-encoder/ms-marco-MiniLM-L-12-v2  (66MB · better quality)": "cross-encoder/ms-marco-MiniLM-L-12-v2",
+        "BAAI/bge-reranker-base  (110MB · best free option)": "BAAI/bge-reranker-base",
+    }
+
+    cfg_reranker = retrieval_cfg.get("reranker_model") or None
+    if cfg_reranker in _RERANKER_MODEL_MAP.values() and cfg_reranker is not None:
+        reranker_preset_default = next(k for k, v in _RERANKER_MODEL_MAP.items() if v == cfg_reranker)
+    else:
+        reranker_preset_default = "None — disabled"
+
+    reranker_preset = st.selectbox(
+        "Re-ranker model",
+        options=_RERANKER_PRESETS,
+        index=_RERANKER_PRESETS.index(reranker_preset_default),
+        key=f"{key_prefix}_reranker_preset",
+        help="Cross-encoder model to re-score retrieved candidates. Downloads on first use.",
+    )
+
+    if reranker_preset == "Custom...":
+        reranker_custom = st.text_input(
+            "Custom re-ranker model name",
+            placeholder="e.g. BAAI/bge-reranker-large",
+            key=f"{key_prefix}_reranker_custom",
+        )
+        reranker_model = reranker_custom.strip() or None
+    else:
+        reranker_model = _RERANKER_MODEL_MAP.get(reranker_preset)
+
+    if reranker_model:
+        rerank_candidates = int(st.number_input(
+            "Candidate pool size",
+            min_value=top_k,
+            max_value=100,
+            value=int(retrieval_cfg.get("rerank_candidates", 20)),
+            step=5,
+            key=f"{key_prefix}_rerank_candidates",
+            help=(
+                f"Bi-encoder fetches this many candidates, then the cross-encoder re-scores them "
+                f"and keeps top {top_k}. More candidates = better recall ceiling, slower re-ranking. "
+                "20 is a good default."
+            ),
+        ))
+        st.caption(
+            f"Pipeline: vector search → top {rerank_candidates} candidates "
+            f"→ cross-encoder re-score → top {top_k} passed to LLM"
+        )
+    else:
+        rerank_candidates = int(retrieval_cfg.get("rerank_candidates", 20))
 
     return {
         "chunking_strategy": chunking_strategy,
@@ -713,6 +781,8 @@ def _config_editor(title: str, cfg: dict, key_prefix: str) -> dict:
         "chunk_size_words": chunk_size,
         "chunk_overlap_words": chunk_overlap,
         "top_k": top_k,
+        "reranker_model": reranker_model,
+        "rerank_candidates": rerank_candidates,
         # CSV / data format settings
         "csv_format": csv_format,
         "csv_question_col": csv_question_col,
@@ -750,6 +820,8 @@ def _write_temp_config(base_cfg: dict, overrides: dict, tag: str,
     if overrides["embedding_provider"] == "openai":
         cfg["embedding"]["openai"]["model"] = overrides["embedding_model"]
     cfg["retrieval"]["top_k"] = int(overrides["top_k"])
+    cfg["retrieval"]["reranker_model"] = overrides.get("reranker_model") or None
+    cfg["retrieval"]["rerank_candidates"] = int(overrides.get("rerank_candidates", 20))
 
     # Objective-driven provider override — takes precedence over config file
     if provider_override:

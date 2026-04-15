@@ -45,8 +45,17 @@ class RAGPipeline:
                 "Re-run `make ingest` (or click Run Eval) to rebuild the index."
             )
 
-        top_k = int(self.config["retrieval"].get("top_k", 4))
-        self.retriever = Retriever(index=self.index, embedder=self.embedder, top_k=top_k)
+        retrieval_cfg = self.config.get("retrieval", {})
+        top_k = int(retrieval_cfg.get("top_k", 4))
+        reranker_model = retrieval_cfg.get("reranker_model") or None
+        rerank_candidates = int(retrieval_cfg.get("rerank_candidates", 20))
+        self.retriever = Retriever(
+            index=self.index,
+            embedder=self.embedder,
+            top_k=top_k,
+            reranker_model=reranker_model,
+            rerank_candidates=rerank_candidates,
+        )
 
     def query(self, text: str) -> dict:
         retrieved = self.retriever.retrieve(text)

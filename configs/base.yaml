@@ -25,6 +25,17 @@ embedding:
 
 retrieval:
   top_k: 4
+  # Re-ranking (optional) — set reranker_model to enable.
+  # The bi-encoder fetches rerank_candidates first, then the cross-encoder
+  # re-scores them and keeps only top_k. Adds ~50-150ms latency but
+  # meaningfully improves MRR (ranking precision).
+  #
+  # Recommended free models (fast → accurate):
+  #   cross-encoder/ms-marco-MiniLM-L-6-v2   (22MB,  fast)
+  #   cross-encoder/ms-marco-MiniLM-L-12-v2  (66MB,  better)
+  #   BAAI/bge-reranker-base                  (110MB, best free option)
+  reranker_model: null            # set to a model name to enable
+  rerank_candidates: 20           # candidate pool size before re-ranking
 
 generation:
   provider: simple  # simple | ollama | openai | huggingface
