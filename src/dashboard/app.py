@@ -965,21 +965,6 @@ def _run_query_with_config(config_path: str, query_text: str) -> dict:
 
 
 def render_single(report: dict) -> None:
-    with st.expander("Metric Guide", expanded=False):
-        st.markdown(
-            "| Metric | What it measures | Reliable with Simple generation? |\n"
-            "|---|---|---|\n"
-            "| **Recall@k** | Did we retrieve the right document? | ✅ Yes |\n"
-            "| **MRR** | How high did the right document rank? | ✅ Yes |\n"
-            "| **Faithfulness (token)** | Word overlap between answer and context | ⚠️ Inflated — answer IS the chunks |\n"
-            "| **Faithfulness (BERTScore)** | Semantic similarity of answer to context using BERT embeddings | ⚠️ Inflated for same reason |\n"
-            "| **Latency** | Avg ms per query | ✅ Yes |\n"
-            "| **Confidence** | Heuristic from retrieval scores | ✅ Yes |\n"
-            "| **Hallucination Rate** | Fraction of queries flagged by either Type 1 or Type 2 | ✅ Yes |\n"
-            "| **Type 1 Hallucination** | Retrieval failure — context not relevant to query (low confidence) | ✅ Yes |\n"
-            "| **Type 2 Hallucination** | Generation unfaithfulness — answer not supported by retrieved context (NLI) | ✅ Yes (needs LLM gen) |"
-        )
-
     summary = report["summary"]
     generation_provider = summary.get("generation_provider", "simple")
 
@@ -1219,347 +1204,552 @@ def render_ab(report_a: dict, report_b: dict) -> None:
 
 
 st.set_page_config(page_title="RAG Eval Dashboard", layout="wide")
-st.title("RAG Evaluation Dashboard")
+st.title("🔬 RAG Evaluation Dashboard")
+st.caption("Measure and improve your RAG pipeline — retrieval quality, faithfulness, and hallucination detection.")
 
 report_files = sorted(glob.glob("eval/reports/eval_*.json"), reverse=True)
 dataset_files = sorted(glob.glob("eval/datasets/*.jsonl"))
 
-st.markdown("### Step 1: Upload Documents")
+tab_setup, tab_single, tab_ab, tab_glossary = st.tabs([
+    "📁 Data & Setup",
+    "▶️ Single Run",
+    "⚖️ A/B Compare",
+    "📖 Metric Glossary",
+])
 
-with st.expander("📋 What file formats are supported?", expanded=False):
-    st.markdown(
-        "| Format | Works out of the box | Notes |\n"
-        "|---|---|---|\n"
-        "| `.txt` `.md` | ✅ Yes | Best for articles, wikis, documentation |\n"
-        "| `.csv` (Q&A columns) | ✅ Yes | Use **qa_pair** strategy — each row becomes one chunk |\n"
-        "| `.csv` (single text column) | ✅ Yes | Use **single_col** mode in CSV Format settings |\n"
-        "| `.csv` (raw / mixed) | ✅ Yes | Use **fixed** strategy — treated as plain text |\n"
-        "| `.pdf` | ✅ Yes | Requires `pip install pypdf` |\n"
-        "| `.json` | ✅ Yes | Treated as formatted text — best for structured data dumps |\n"
-        "\n"
-        "**⚠️ CSV tip:** If your CSV has a `question` and `answer` column, "
-        "don't use `fixed` chunking — it will randomly cut across rows. "
-        "Select **qa_pair** in the Chunking Strategy dropdown below."
+
+# ════════════════════════════════════════════════════════════════════════════════
+# Tab 1 — Data & Setup
+# ════════════════════════════════════════════════════════════════════════════════
+with tab_setup:
+    st.subheader("Step 1 — Upload Documents")
+
+    with st.expander("📋 Supported file formats", expanded=False):
+        st.markdown(
+            "| Format | Works out of the box | Notes |\n"
+            "|---|---|---|\n"
+            "| `.txt` `.md` | ✅ Yes | Best for articles, wikis, documentation |\n"
+            "| `.csv` (Q&A columns) | ✅ Yes | Use **qa_pair** strategy — each row becomes one chunk |\n"
+            "| `.csv` (single text column) | ✅ Yes | Use **single_col** mode in CSV Format settings |\n"
+            "| `.csv` (raw / mixed) | ✅ Yes | Use **fixed** strategy — treated as plain text |\n"
+            "| `.pdf` | ✅ Yes | Requires `pip install pypdf` |\n"
+            "| `.json` | ✅ Yes | Treated as formatted text — best for structured data dumps |\n"
+            "\n"
+            "**⚠️ CSV tip:** If your CSV has a `question` and `answer` column, "
+            "select **qa_pair** in the Chunking Strategy in the Run tabs."
+        )
+
+    uploads = st.file_uploader(
+        "Upload files for indexing",
+        type=["txt", "md", "csv", "json", "pdf"],
+        accept_multiple_files=True,
     )
-
-uploads = st.file_uploader(
-    "Upload your files for indexing",
-    type=["txt", "md", "csv", "json", "pdf"],
-    accept_multiple_files=True,
-)
-if st.button("Save Uploaded Files"):
-    if uploads:
-        saved_files = _save_uploaded_files(uploads, data_dir="data")
-        st.success(f"✅ Saved {len(saved_files)} file(s) to `data/`: {', '.join(saved_files)}")
-
-        # After save: show what was detected and what to do next
-        info = _scan_data_folder("data")
-        strategy, explanation = _recommend_strategy(info["counts"])
-        st.info(
-            f"💡 **Next step:** Go to **Step 3 → Chunking Strategy** and select `{strategy}`. "
-            f"{explanation}"
-        )
-    else:
-        st.info("No files selected.")
-
-# Always show current data folder status
-_render_data_advisor("data")
-
-st.markdown("### Step 2: Build Eval Dataset")
-if "eval_builder_rows" not in st.session_state:
-    st.session_state["eval_builder_rows"] = []
-data_files = _list_data_files()
-builder_col1, builder_col2 = st.columns(2)
-query_input = builder_col1.text_input("Question", key="builder_query")
-ref_answer_input = builder_col2.text_input("Reference Answer", key="builder_reference")
-doc_id_input = st.selectbox(
-    "Expected Document ID",
-    options=data_files if data_files else ["(no files in data/)"],
-    index=0,
-)
-add_col1, add_col2 = st.columns(2)
-if add_col1.button("Add Eval Row"):
-    if query_input.strip() and ref_answer_input.strip() and doc_id_input != "(no files in data/)":
-        st.session_state["eval_builder_rows"].append(
-            {
-                "query": query_input.strip(),
-                "reference_answer": ref_answer_input.strip(),
-                "expected_doc_ids": [doc_id_input],
-            }
-        )
-        st.success("Row added.")
-    else:
-        st.warning("Question, Reference Answer, and Expected Document are required.")
-if add_col2.button("Clear Eval Rows"):
-    st.session_state["eval_builder_rows"] = []
-
-rows = st.session_state["eval_builder_rows"]
-if rows:
-    st.dataframe(rows, use_container_width=True)
-dataset_name = st.text_input("Dataset filename", value="pm_eval.jsonl")
-if st.button("Save Eval Dataset"):
-    if not rows:
-        st.warning("No eval rows to save.")
-    else:
-        output_path = _save_eval_dataset(rows, f"eval/datasets/{dataset_name}")
-        st.success(f"Saved dataset to {output_path}")
-        dataset_files = sorted(glob.glob("eval/datasets/*.jsonl"))
-else:
-    st.info("No eval rows yet. Add at least one question.")
-
-mode = st.radio("Mode", ["Single Run", "A/B Compare"], horizontal=True)
-
-if mode == "Single Run":
-    if not dataset_files:
-        st.error("Missing dataset files. Expected `eval/datasets/*.jsonl`.")
-        st.stop()
-    base_config = "configs/base.yaml"
-    if not Path(base_config).exists():
-        st.error("Missing base config `configs/base.yaml`.")
-        st.stop()
-
-    st.subheader("Step 3: Run Single Evaluation")
-    cfg = _read_cfg(base_config)
-
-    # ── Objective selector — drives provider + dataset + max_queries ──────────
-    st.divider()
-    obj_settings = _render_objective_selector("single", dataset_files)
-    dataset = obj_settings["selected_dataset"]
-    single_max_q = obj_settings["max_queries"]
-    provider_override = obj_settings["provider_override"]
-    st.divider()
-
-    with st.expander("⚙️ Advanced — Chunking, Embedding & Retrieval Settings", expanded=False):
-        with st.expander("Parameter Guide — what each setting does per strategy", expanded=False):
-            st.markdown(_PARAM_GUIDE_TABLE)
-
-    # _config_editor must always run (Streamlit requires consistent widget order)
-    single_params = _config_editor("Parameters", cfg, "single")
-    _render_index_info(cfg["paths"].get("index_dir", "artifacts/index"), single_params)
-    if single_params["chunking_strategy"] == "qa_pair":
-        st.info(
-            "ℹ️ **qa_pair strategy** — each CSV row becomes one chunk. "
-            "Column names set above will apply automatically."
-        )
-
-    if st.button("▶️ Run Eval", type="primary"):
-        if single_params["chunking_strategy"] == "semantic":
-            st.error("Semantic chunking is coming soon. Please select a different strategy.")
-            st.stop()
-        if single_params["embedding_provider"] == "openai":
-            st.error("OpenAI embeddings are coming soon. Please use sentence-transformers.")
-            st.stop()
-        status = st.empty()
-        status.info(f"Starting eval — objective: {obj_settings['objective_name']}, provider: `{provider_override}`")
-        try:
-            temp_config = _write_temp_config(cfg, single_params, "single",
-                                              provider_override=provider_override)
-            report = _run_eval_with_optional_progress(
-                config_path=temp_config,
-                dataset_path=dataset,
-                status_slot=status,
-                max_queries=int(single_max_q),
-            )
-            report["effective_config"] = temp_config
-            report["objective"] = obj_settings["objective_name"]
-            st.session_state["single_report"] = report
-            status.success(
-                f"✅ Eval complete — {report['summary']['num_queries']} queries · "
-                f"provider: `{provider_override}` · "
-                f"focus: `{'`, `'.join(obj_settings['focus_metrics'])}`"
-            )
-        except Exception as exc:
-            status.error(f"Evaluation failed: {exc}")
-            st.exception(exc)
-
-    st.subheader("Step 3: Query Playground")
-    query_text = st.text_area("Ask a question against current single-run settings", height=100)
-    if st.button("Run Query"):
-        if not query_text.strip():
-            st.warning("Please enter a question.")
-        else:
-            status_q = st.empty()
-            status_q.info("Running query...")
-            try:
-                temp_config = _write_temp_config(cfg, single_params, "single_query")
-                query_result = _run_query_with_config(temp_config, query_text.strip())
-                status_q.success("Query complete")
-                st.write("**Answer**")
-                st.write(query_result.get("answer", ""))
-                qc1, qc2, qc3, qc4 = st.columns(4)
-                qc1.metric("Confidence", f"{query_result.get('confidence', 0.0):.3f}")
-                qc2.metric("Hallucination Risk", "Yes ⚠️" if query_result.get("hallucination_risk") else "No ✅")
-
-                hallucination = query_result.get("hallucination", {})
-                type1 = hallucination.get("type1", {})
-                type2 = hallucination.get("type2", {})
-
-                # Type 1 — retrieval confidence
-                t1_risk = type1.get("risk_level", "unknown")
-                t1_color = {"low": "🟢", "medium": "🟡", "high": "🔴"}.get(t1_risk, "⚪")
-                qc3.metric("Type 1 (retrieval)", f"{t1_color} {t1_risk}")
-
-                # Type 2 — NLI grounding score
-                t2_score = type2.get("score", None)
-                if t2_score is not None:
-                    t2_label = f"{'🔴' if t2_score < 0.5 else '🟡' if t2_score < 0.8 else '🟢'} {t2_score:.2f}"
-                    t2_caption = "NLI grounding score"
-                else:
-                    t2_label = "—"
-                    t2_caption = "NLI skipped"
-                qc4.metric("Type 2 (NLI grounding)", t2_label)
-
-                if type1.get("reason"):
-                    st.caption(f"Type 1 reason: {type1['reason']}")
-                if type2.get("flagged"):
-                    unfaithful = [d["sentence"] for d in type2.get("detail", []) if d["label"] != "entailment"]
-                    if unfaithful:
-                        with st.expander("Type 2 — Ungrounded sentences", expanded=False):
-                            for s in unfaithful:
-                                st.markdown(f"- _{s}_")
-
-                st.write("**Retrieved Context**")
-                st.dataframe(query_result.get("sources", []), use_container_width=True)
-            except Exception as exc:
-                status_q.error(f"Query failed: {exc}")
-                st.exception(exc)
-
-    single_report = st.session_state.get("single_report")
-    if single_report:
-        obj_name = single_report.get("objective", "")
-        if obj_name and obj_name in _OBJECTIVES:
-            obj_meta = _OBJECTIVES[obj_name]
+    if st.button("Save Uploaded Files"):
+        if uploads:
+            saved_files = _save_uploaded_files(uploads, data_dir="data")
+            st.success(f"✅ Saved {len(saved_files)} file(s) to `data/`: {', '.join(saved_files)}")
+            info = _scan_data_folder("data")
+            strategy, explanation = _recommend_strategy(info["counts"])
             st.info(
-                f"**Results for objective: {obj_name}** — "
-                f"Focus on: `{'`  ·  `'.join(obj_meta['focus_metrics'])}`"
+                f"💡 **Next step:** Switch to **▶️ Single Run** and set Chunking Strategy to `{strategy}`. "
+                f"{explanation}"
             )
-        st.caption(f"Effective config: {single_report.get('effective_config')}")
-        render_single(single_report)
-    else:
-        st.info("No in-session result yet — select an objective above and click ▶️ Run Eval.")
-else:
-    if not dataset_files:
-        st.error("Missing dataset files. Expected `eval/datasets/*.jsonl`.")
-        st.stop()
-    base_config = "configs/base.yaml"
-    if not Path(base_config).exists():
-        st.error("Missing base config `configs/base.yaml`.")
-        st.stop()
+        else:
+            st.info("No files selected.")
 
-    st.subheader("Step 3: Run A/B Test")
+    _render_data_advisor("data")
 
-    # ── Objective selector — drives provider + dataset + max_queries ──────────
     st.divider()
-    ab_obj = _render_objective_selector("ab", dataset_files)
-    dataset = ab_obj["selected_dataset"]
-    ab_max_q = ab_obj["max_queries"]
-    ab_provider_override = ab_obj["provider_override"]
-    st.info(
-        f"⚠️ A/B runs **twice** (control + test) = **{ab_max_q * 2} total queries**. "
-        f"Provider auto-set to `{ab_provider_override}` based on your objective."
+    st.subheader("Step 2 — Build Eval Dataset")
+    st.caption(
+        "Create a question set to evaluate against. Each row needs a question, "
+        "reference answer, and the source document it should come from."
     )
+
+    if "eval_builder_rows" not in st.session_state:
+        st.session_state["eval_builder_rows"] = []
+
+    data_files = _list_data_files()
+    b_col1, b_col2 = st.columns(2)
+    query_input = b_col1.text_input("Question", key="builder_query")
+    ref_answer_input = b_col2.text_input("Reference Answer", key="builder_reference")
+    doc_id_input = st.selectbox(
+        "Expected Document ID",
+        options=data_files if data_files else ["(no files in data/)"],
+        index=0,
+    )
+    btn_add, btn_clear = st.columns(2)
+    if btn_add.button("Add Row"):
+        if query_input.strip() and ref_answer_input.strip() and doc_id_input != "(no files in data/)":
+            st.session_state["eval_builder_rows"].append(
+                {
+                    "query": query_input.strip(),
+                    "reference_answer": ref_answer_input.strip(),
+                    "expected_doc_ids": [doc_id_input],
+                }
+            )
+            st.success("Row added.")
+        else:
+            st.warning("Question, Reference Answer, and Expected Document are all required.")
+    if btn_clear.button("Clear All Rows"):
+        st.session_state["eval_builder_rows"] = []
+
+    rows = st.session_state["eval_builder_rows"]
+    if rows:
+        st.dataframe(rows, use_container_width=True)
+    else:
+        st.caption("No rows yet — add at least one question above, or use an existing dataset.")
+
+    dataset_name = st.text_input("Dataset filename", value="pm_eval.jsonl")
+    if st.button("Save Eval Dataset"):
+        if not rows:
+            st.warning("No rows to save.")
+        else:
+            output_path = _save_eval_dataset(rows, f"eval/datasets/{dataset_name}")
+            st.success(f"✅ Saved {len(rows)} rows to `{output_path}`")
+            dataset_files = sorted(glob.glob("eval/datasets/*.jsonl"))
+
+
+# ════════════════════════════════════════════════════════════════════════════════
+# Tab 2 — Single Run
+# ════════════════════════════════════════════════════════════════════════════════
+with tab_single:
+    _has_datasets_s = bool(dataset_files)
+    _has_config_s = Path("configs/base.yaml").exists()
+
+    if not _has_datasets_s:
+        st.warning("No eval datasets found. Go to **📁 Data & Setup → Step 2** to create one.")
+    if not _has_config_s:
+        st.error("Missing `configs/base.yaml`.")
+
+    if _has_datasets_s and _has_config_s:
+        cfg = _read_cfg("configs/base.yaml")
+
+        # ── Objective selector ────────────────────────────────────────────────
+        obj_settings = _render_objective_selector("single", dataset_files)
+        dataset = obj_settings["selected_dataset"]
+        single_max_q = obj_settings["max_queries"]
+        provider_override = obj_settings["provider_override"]
+
+        st.divider()
+
+        # ── Config editor (always render — Streamlit requires consistent widget order)
+        with st.expander("⚙️ Chunking, Embedding & Retrieval Settings", expanded=False):
+            with st.expander("📖 Parameter Guide — what each setting does per strategy", expanded=False):
+                st.markdown(_PARAM_GUIDE_TABLE)
+            single_params = _config_editor("", cfg, "single")
+            _render_index_info(cfg["paths"].get("index_dir", "artifacts/index"), single_params)
+
+        if single_params["chunking_strategy"] == "qa_pair":
+            st.info("ℹ️ **qa_pair strategy** — each CSV row becomes one chunk. Column names configured in Settings above.")
+
+        # ── Run button ────────────────────────────────────────────────────────
+        if st.button("▶️ Run Eval", type="primary", key="single_run_btn"):
+            if single_params["chunking_strategy"] == "semantic":
+                st.error("Semantic chunking is not yet implemented. Please select a different strategy.")
+            elif single_params["embedding_provider"] == "openai":
+                st.error("OpenAI embeddings are coming soon. Please use sentence-transformers.")
+            else:
+                status = st.empty()
+                status.info(
+                    f"Starting — objective: {obj_settings['objective_name']} · "
+                    f"provider: `{provider_override}`"
+                )
+                try:
+                    temp_config = _write_temp_config(cfg, single_params, "single",
+                                                      provider_override=provider_override)
+                    report = _run_eval_with_optional_progress(
+                        config_path=temp_config,
+                        dataset_path=dataset,
+                        status_slot=status,
+                        max_queries=int(single_max_q),
+                    )
+                    report["effective_config"] = temp_config
+                    report["objective"] = obj_settings["objective_name"]
+                    st.session_state["single_report"] = report
+                    status.success(
+                        f"✅ Eval complete — {report['summary']['num_queries']} queries · "
+                        f"provider: `{provider_override}` · "
+                        f"focus: `{'`, `'.join(obj_settings['focus_metrics'])}`"
+                    )
+                except Exception as exc:
+                    status.error(f"Evaluation failed: {exc}")
+                    st.exception(exc)
+
+        # ── Results ───────────────────────────────────────────────────────────
+        single_report = st.session_state.get("single_report")
+        if single_report:
+            obj_name = single_report.get("objective", "")
+            if obj_name and obj_name in _OBJECTIVES:
+                obj_meta = _OBJECTIVES[obj_name]
+                st.info(
+                    f"**{obj_name}** — "
+                    f"Focus metrics: `{'`  ·  `'.join(obj_meta['focus_metrics'])}`"
+                )
+            st.caption(f"Config: `{single_report.get('effective_config')}`")
+            render_single(single_report)
+        else:
+            st.info("No results yet — configure your objective above and click **▶️ Run Eval**.")
+
+        st.divider()
+
+        # ── Query Playground ──────────────────────────────────────────────────
+        st.subheader("Query Playground")
+        st.caption("Run a single question against current settings to inspect retrieved context and the generated answer.")
+        query_text = st.text_area(
+            "Your question",
+            height=80,
+            placeholder="e.g. What causes fever?",
+            key="single_query_input",
+        )
+        if st.button("Run Query", key="single_query_btn"):
+            if not query_text.strip():
+                st.warning("Please enter a question.")
+            else:
+                status_q = st.empty()
+                status_q.info("Running...")
+                try:
+                    temp_config = _write_temp_config(cfg, single_params, "single_query")
+                    query_result = _run_query_with_config(temp_config, query_text.strip())
+                    status_q.empty()
+
+                    st.markdown("**Answer**")
+                    st.write(query_result.get("answer", ""))
+
+                    qc1, qc2, qc3, qc4 = st.columns(4)
+                    qc1.metric("Confidence", f"{query_result.get('confidence', 0.0):.3f}")
+                    qc2.metric("Hallucination Risk", "Yes ⚠️" if query_result.get("hallucination_risk") else "No ✅")
+
+                    hallucination = query_result.get("hallucination", {})
+                    type1 = hallucination.get("type1", {})
+                    type2 = hallucination.get("type2", {})
+
+                    t1_risk = type1.get("risk_level", "unknown")
+                    t1_color = {"low": "🟢", "medium": "🟡", "high": "🔴"}.get(t1_risk, "⚪")
+                    qc3.metric("Type 1 (retrieval)", f"{t1_color} {t1_risk}")
+
+                    t2_score = type2.get("score", None)
+                    if t2_score is not None:
+                        t2_label = f"{'🔴' if t2_score < 0.5 else '🟡' if t2_score < 0.8 else '🟢'} {t2_score:.2f}"
+                    else:
+                        t2_label = "— skipped"
+                    qc4.metric("Type 2 (NLI grounding)", t2_label)
+
+                    if type1.get("reason"):
+                        st.caption(f"Type 1 reason: {type1['reason']}")
+                    if type2.get("flagged"):
+                        unfaithful = [d["sentence"] for d in type2.get("detail", []) if d["label"] != "entailment"]
+                        if unfaithful:
+                            with st.expander("Ungrounded sentences (Type 2)", expanded=False):
+                                for s in unfaithful:
+                                    st.markdown(f"- _{s}_")
+
+                    st.markdown("**Retrieved Context**")
+                    st.dataframe(query_result.get("sources", []), use_container_width=True)
+                except Exception as exc:
+                    status_q.error(f"Query failed: {exc}")
+                    st.exception(exc)
+
+
+# ════════════════════════════════════════════════════════════════════════════════
+# Tab 3 — A/B Compare
+# ════════════════════════════════════════════════════════════════════════════════
+with tab_ab:
+    _has_datasets_ab = bool(dataset_files)
+    _has_config_ab = Path("configs/base.yaml").exists()
+
+    if not _has_datasets_ab:
+        st.warning("No eval datasets found. Go to **📁 Data & Setup → Step 2** to create one.")
+    if not _has_config_ab:
+        st.error("Missing `configs/base.yaml`.")
+
+    if _has_datasets_ab and _has_config_ab:
+        # ── Objective selector ────────────────────────────────────────────────
+        ab_obj = _render_objective_selector("ab", dataset_files)
+        dataset_ab = ab_obj["selected_dataset"]
+        ab_max_q = ab_obj["max_queries"]
+        ab_provider_override = ab_obj["provider_override"]
+        st.info(
+            f"A/B runs **twice** (control + test) = **{ab_max_q * 2} total queries** · "
+            f"provider: `{ab_provider_override}`"
+        )
+
+        st.divider()
+
+        # ── Primary metric selector ───────────────────────────────────────────
+        metric_options = {
+            "Recall@k — retrieval coverage": "recall_at_k",
+            "MRR — ranking quality": "mrr",
+            "Faithfulness — BERTScore (use with ollama)": "faithfulness_bertscore",
+            "Faithfulness — token overlap": "faithfulness_proxy",
+            "Latency — lower is better": "latency_ms",
+            "Confidence": "confidence",
+        }
+        _obj_to_metric = {
+            "🔍 Test Retrieval Quality": "Recall@k — retrieval coverage",
+            "📊 Compare Chunking / Embedding": "Recall@k — retrieval coverage",
+            "🛡️ Measure Hallucination": "Recall@k — retrieval coverage",
+            "📝 Evaluate Answer Quality": "Faithfulness — BERTScore (use with ollama)",
+            "✅ Full Validation": "Recall@k — retrieval coverage",
+        }
+        suggested_metric = _obj_to_metric.get(ab_obj["objective_name"], "Recall@k — retrieval coverage")
+        metric_idx = list(metric_options.keys()).index(suggested_metric)
+        metric_label = st.selectbox(
+            "Primary A/B Metric (used to determine winner)",
+            list(metric_options.keys()),
+            index=metric_idx,
+            key="ab_metric_selector",
+        )
+        st.session_state["ab_metric_key"] = metric_options[metric_label]
+
+        st.divider()
+
+        # ── Control / Test config editors ─────────────────────────────────────
+        with st.expander("⚙️ Control vs Test Settings", expanded=True):
+            with st.expander("📖 Parameter Guide — what each setting does per strategy", expanded=False):
+                st.markdown(_PARAM_GUIDE_TABLE)
+            cfg_a = _read_cfg("configs/base.yaml")
+            cfg_b = _read_cfg("configs/base.yaml")
+            left, right = st.columns(2)
+            with left:
+                st.markdown("**Control**")
+                overrides_a = _config_editor("", cfg_a, "ab_control")
+            with right:
+                st.markdown("**Test**")
+                overrides_b = _config_editor("", cfg_b, "ab_test")
+            _render_index_info(cfg_a["paths"].get("index_dir", "artifacts/index"), overrides_a)
+
+        # ── Run button ────────────────────────────────────────────────────────
+        if st.button("▶️ Run A/B", type="primary", key="ab_run_btn"):
+            if overrides_a["chunking_strategy"] == "semantic" or overrides_b["chunking_strategy"] == "semantic":
+                st.error("Semantic chunking is not yet implemented. Please select a different strategy.")
+            elif overrides_a["embedding_provider"] == "openai" or overrides_b["embedding_provider"] == "openai":
+                st.error("OpenAI embeddings are coming soon. Please use sentence-transformers.")
+            else:
+                status = st.empty()
+                status.info(
+                    f"Starting A/B — {ab_obj['objective_name']} · "
+                    f"provider: `{ab_provider_override}` · {ab_max_q} queries × 2"
+                )
+                try:
+                    temp_config_a = _write_temp_config(cfg_a, overrides_a, "control",
+                                                        provider_override=ab_provider_override)
+                    temp_config_b = _write_temp_config(cfg_b, overrides_b, "test",
+                                                        provider_override=ab_provider_override)
+                    result = _run_ab_with_optional_progress(
+                        config_a=temp_config_a,
+                        config_b=temp_config_b,
+                        dataset_path=dataset_ab,
+                        status_slot=status,
+                        max_queries=int(ab_max_q),
+                    )
+                    result["effective_control_config"] = temp_config_a
+                    result["effective_test_config"] = temp_config_b
+                    result["objective"] = ab_obj["objective_name"]
+                    st.session_state["ab_result"] = result
+                    status.success(
+                        f"✅ A/B complete · focus: `{'`, `'.join(ab_obj['focus_metrics'])}`"
+                    )
+                except Exception as exc:
+                    status.error(f"A/B evaluation failed: {exc}")
+                    st.exception(exc)
+
+        # ── Results ───────────────────────────────────────────────────────────
+        ab_result = st.session_state.get("ab_result")
+        if ab_result:
+            winner = ab_result["winner"]
+            winner_label = "Control" if winner == "A" else "Test" if winner == "B" else "Inconclusive"
+            metric_name = ab_result["metric"]
+            delta = float(ab_result.get("mean_delta_b_minus_a", 0.0))
+            p_val = float(ab_result.get("p_value", 1.0))
+            confidence_phrase = (
+                "high statistical confidence" if p_val < 0.01
+                else "moderate confidence" if p_val < 0.05
+                else "low confidence"
+            )
+            direction = "improves" if delta >= 0 else "reduces"
+            plain_summary = (
+                f"{winner_label} is the winner on `{metric_name}` with {confidence_phrase} "
+                f"(p={p_val:.4f}). Test {direction} the metric by {abs(delta):.4f} vs Control."
+            )
+            st.success(
+                f"Winner: **{winner_label}** · Metric: `{ab_result['metric']}` · "
+                f"p-value: `{ab_result['p_value']:.4f}`"
+            )
+            st.info(plain_summary)
+            st.caption(
+                f"Configs — Control: `{ab_result.get('effective_control_config')}` · "
+                f"Test: `{ab_result.get('effective_test_config')}`"
+            )
+            left_report = load_report(ab_result["report_path_a"])
+            right_report = load_report(ab_result["report_path_b"])
+            render_ab(left_report, right_report)
+            st.download_button(
+                "Download A/B Summary JSON",
+                data=json.dumps(ab_result, ensure_ascii=True, indent=2).encode("utf-8"),
+                file_name="ab_summary.json",
+                mime="application/json",
+            )
+        else:
+            st.info("No A/B results yet — configure Control vs Test above and click **▶️ Run A/B**.")
+
+
+# ════════════════════════════════════════════════════════════════════════════════
+# Tab 4 — Metric Glossary
+# ════════════════════════════════════════════════════════════════════════════════
+with tab_glossary:
+    st.header("Metric Glossary")
+    st.caption(
+        "Reference guide for every metric in the dashboard. "
+        "Open this tab whenever you need to interpret a result."
+    )
+
+    # ── Retrieval Metrics ─────────────────────────────────────────────────────
+    st.subheader("🔍 Retrieval Metrics")
+    st.caption(
+        "These measure whether the retrieval stage found the right documents. "
+        "Always reliable — independent of which generation provider you use."
+    )
+    st.markdown("""
+| Metric | What it measures | Range | Good threshold |
+|---|---|---|---|
+| **Recall@K** | Was the relevant document retrieved within the top K results? | 0 – 1 | ≥ 0.75 |
+| **MRR** (Mean Reciprocal Rank) | How highly was the *first* relevant document ranked? Score = 1 ÷ rank | 0 – 1 | ≥ 0.70 |
+| **Precision@K** | Of the K chunks returned, what fraction were relevant? | 0 – 1 | ≥ 0.50 |
+| **NDCG@K** | Like MRR but gives partial credit for correct chunks ranked lower. Weighted by position. | 0 – 1 | ≥ 0.70 |
+""")
+
+    with st.expander("📖 Recall@K vs MRR — when to use which?", expanded=False):
+        st.markdown("""
+**Recall@K** answers: *"Did we find the document at all?"*
+- Best for checking whether your knowledge base has **coverage**
+- Example: Recall@4 = 0.95 means 95% of queries found the answer in the top 4 chunks
+
+**MRR** answers: *"Was the best document ranked first?"*
+- Best for checking whether the **most relevant chunk** surfaces at the top
+- Example: MRR = 0.80 means the first correct chunk appears at an average rank of 1.25
+
+**Rule of thumb:** Use Recall to diagnose coverage gaps. Use MRR to diagnose ranking quality — especially useful when comparing re-ranker vs no re-ranker.
+        """)
+
     st.divider()
 
-    metric_options = {
-        "Recall@k — retrieval coverage": "recall_at_k",
-        "MRR — ranking quality": "mrr",
-        "Faithfulness — BERTScore (use with ollama)": "faithfulness_bertscore",
-        "Faithfulness — token overlap": "faithfulness_proxy",
-        "Latency — lower is better": "latency_ms",
-        "Confidence": "confidence",
-    }
-    # Auto-suggest primary metric based on objective
-    _obj_to_metric = {
-        "🔍 Test Retrieval Quality": "Recall@k — retrieval coverage",
-        "📊 Compare Chunking / Embedding": "Recall@k — retrieval coverage",
-        "🛡️ Measure Hallucination": "Recall@k — retrieval coverage",
-        "📝 Evaluate Answer Quality": "Faithfulness — BERTScore (use with ollama)",
-        "✅ Full Validation": "Recall@k — retrieval coverage",
-    }
-    suggested_metric = _obj_to_metric.get(ab_obj["objective_name"], "Recall@k — retrieval coverage")
-    metric_idx = list(metric_options.keys()).index(suggested_metric)
-    metric_label = st.selectbox("Primary A/B Metric (for winner determination)",
-                                 list(metric_options.keys()), index=metric_idx)
-    st.session_state["ab_metric_key"] = metric_options[metric_label]
+    # ── Faithfulness Metrics ──────────────────────────────────────────────────
+    st.subheader("📝 Faithfulness Metrics")
+    st.caption(
+        "These measure whether the *generated answer* is grounded in the retrieved context. "
+        "Only meaningful with a real LLM (`ollama` / `openai`). "
+        "With `simple` generation, the answer IS the chunks — so faithfulness is always inflated."
+    )
+    st.markdown("""
+| Metric | What it measures | Range | Good threshold | `simple` generation |
+|---|---|---|---|---|
+| **Token Overlap** | What % of answer words appear verbatim in the retrieved context? | 0 – 1 | ≥ 0.80 | ⚠️ Always ~1.0 |
+| **BERTScore Faithfulness** | Semantic similarity between answer and context via BERT. Catches paraphrases token overlap misses. | 0 – 1 | ≥ 0.85 | ⚠️ Always ~1.0 |
+""")
+    st.info(
+        "💡 **Both faithfulness numbers look identical?** "
+        "BERTScore is falling back to token overlap. "
+        "Fix: `pip install bert-score` then re-run the eval."
+    )
 
-    with st.expander("⚙️ Advanced — Control vs Test Parameters", expanded=True):
-        with st.expander("Parameter Guide", expanded=False):
-            st.markdown(_PARAM_GUIDE_TABLE)
-        cfg_a = _read_cfg(base_config)
-        cfg_b = _read_cfg(base_config)
-        left, right = st.columns(2)
-        with left:
-            overrides_a = _config_editor("Control Parameters", cfg_a, "ab_control")
-        with right:
-            overrides_b = _config_editor("Test Parameters", cfg_b, "ab_test")
-        _render_index_info(cfg_a["paths"].get("index_dir", "artifacts/index"), overrides_a)
+    st.divider()
 
-    if st.button("▶️ Run A/B", type="primary"):
-        if overrides_a["chunking_strategy"] == "semantic" or overrides_b["chunking_strategy"] == "semantic":
-            st.error("Semantic chunking is coming soon. Please select a different strategy.")
-            st.stop()
-        if overrides_a["embedding_provider"] == "openai" or overrides_b["embedding_provider"] == "openai":
-            st.error("OpenAI embeddings are coming soon. Please use sentence-transformers.")
-            st.stop()
-        status = st.empty()
-        status.info(
-            f"Starting A/B — objective: {ab_obj['objective_name']} · "
-            f"provider: `{ab_provider_override}` · {ab_max_q} queries × 2"
-        )
-        try:
-            temp_config_a = _write_temp_config(cfg_a, overrides_a, "control",
-                                                provider_override=ab_provider_override)
-            temp_config_b = _write_temp_config(cfg_b, overrides_b, "test",
-                                                provider_override=ab_provider_override)
-            result = _run_ab_with_optional_progress(
-                config_a=temp_config_a,
-                config_b=temp_config_b,
-                dataset_path=dataset,
-                status_slot=status,
-                max_queries=int(ab_max_q),
-            )
-            result["effective_control_config"] = temp_config_a
-            result["effective_test_config"] = temp_config_b
-            result["objective"] = ab_obj["objective_name"]
-            st.session_state["ab_result"] = result
-            status.success(
-                f"✅ A/B complete — focus: `{'`, `'.join(ab_obj['focus_metrics'])}`"
-            )
-        except Exception as exc:
-            status.error(f"A/B evaluation failed: {exc}")
-            st.exception(exc)
+    # ── Hallucination Metrics ─────────────────────────────────────────────────
+    st.subheader("⚠️ Hallucination Detection")
+    st.caption("Two complementary checks — one for retrieval quality, one for generation faithfulness.")
 
-    ab_result = st.session_state.get("ab_result")
-    if ab_result:
-        winner = ab_result["winner"]
-        winner_label = "Control" if winner == "A" else "Test" if winner == "B" else "Inconclusive"
-        metric_name = ab_result["metric"]
-        delta = float(ab_result.get("mean_delta_b_minus_a", 0.0))
-        p_val = float(ab_result.get("p_value", 1.0))
-        confidence_phrase = "high statistical confidence" if p_val < 0.01 else "moderate confidence" if p_val < 0.05 else "low confidence"
-        direction = "improves" if delta >= 0 else "reduces"
-        plain_summary = (
-            f"{winner_label} is the current winner on `{metric_name}` with {confidence_phrase} "
-            f"(p={p_val:.4f}). Test {direction} the selected metric by {abs(delta):.4f} vs Control."
-        )
-        st.success(
-            f"Winner: {winner_label} | "
-            f"Metric: {ab_result['metric']} | "
-            f"p-value: {ab_result['p_value']:.4f}"
-        )
-        st.info(plain_summary)
-        st.caption(
-            f"Effective configs: Control={ab_result.get('effective_control_config')} | "
-            f"Test={ab_result.get('effective_test_config')}"
-        )
-        left_report = load_report(ab_result["report_path_a"])
-        right_report = load_report(ab_result["report_path_b"])
-        render_ab(left_report, right_report)
-        st.download_button(
-            "Download A/B Summary JSON",
-            data=json.dumps(ab_result, ensure_ascii=True, indent=2).encode("utf-8"),
-            file_name="ab_summary.json",
-            mime="application/json",
-        )
-    else:
-        st.info("No in-session A/B result yet. Click `Run A/B`.")
+    h_col1, h_col2 = st.columns(2)
+
+    with h_col1:
+        st.markdown("#### Type 1 — Retrieval Failure")
+        st.markdown("""
+**What:** The retrieved chunks were not relevant to the query — the system simply didn't find the right document.
+
+**How:** Confidence heuristic based on similarity scores of the top-K retrieved chunks. Low scores = the index doesn't contain the answer.
+
+**Thresholds (rate):**
+- 🟢 < 10% → Retrieval is working well
+- 🟡 10–30% → Some coverage or chunking gaps
+- 🔴 > 30% → Significant retrieval problem
+
+**Works with `simple`?** ✅ Yes
+
+**Fix:** Better chunking strategy, more data, stronger embedding model, or enable re-ranking.
+        """)
+
+    with h_col2:
+        st.markdown("#### Type 2 — Generation Unfaithfulness")
+        st.markdown("""
+**What:** The LLM made claims **not supported** by the retrieved context — it hallucinated.
+
+**How:** NLI (Natural Language Inference) checks whether each answer sentence is *entailed* by the source chunks. Sentences labeled `contradiction` or `neutral` are flagged.
+
+**Thresholds (NLI score):**
+- 🟢 > 0.80 → Mostly grounded
+- 🟡 0.50–0.80 → Some ungrounded sentences
+- 🔴 < 0.50 → Significant hallucination
+
+**Works with `simple`?** ❌ No — requires `ollama` or `openai`
+
+**Fix:** Better generation prompt, higher-quality LLM, lower Top K (less noisy context), or re-ranking.
+        """)
+
+    st.markdown("""
+| Metric | Description | Range | Good threshold |
+|---|---|---|---|
+| **Type 1 Hallucination Rate** | % of queries where retrieval confidence was too low | 0 – 1 | < 0.10 |
+| **Type 2 Hallucination Rate** | % of queries where generation had ungrounded sentences (NLI) | 0 – 1 | < 0.10 |
+| **NLI Score** | Avg sentence-level entailment score across measured queries (1.0 = fully grounded) | 0 – 1 | > 0.80 |
+| **Overall Hallucination Rate** | Union of Type 1 and Type 2 flags | 0 – 1 | < 0.15 |
+""")
+
+    st.divider()
+
+    # ── System Metrics ────────────────────────────────────────────────────────
+    st.subheader("⚡ System Metrics")
+    st.markdown("""
+| Metric | What it measures | Range | Good threshold |
+|---|---|---|---|
+| **Latency (ms)** | Avg end-to-end time per query: embed → vector search → (re-rank) → generate | ms | ≤ 1,200ms |
+| **Confidence** | Heuristic from top-K retrieval similarity scores. Proxy for "how certain is the system?" | 0 – 1 | ≥ 0.60 |
+""")
+
+    st.divider()
+
+    # ── Provider Guide ────────────────────────────────────────────────────────
+    st.subheader("🤔 Which generation provider should I use?")
+    st.markdown("""
+| Provider | Speed | Retrieval metrics | Faithfulness | Hallucination Type 2 | Best for |
+|---|---|---|---|---|---|
+| `simple` | ⚡ Instant | ✅ Reliable | ⚠️ Inflated | ❌ Skipped | Retrieval benchmarking, chunking & embedding comparison |
+| `ollama` | 🐢 Slow (local LLM) | ✅ Reliable | ✅ Reliable | ✅ Measured | Hallucination detection, faithfulness, production readiness |
+| `openai` | 🚀 Fast (API) | ✅ Reliable | ✅ Reliable | ✅ Measured | Large-scale eval, production-quality results |
+""")
+
+    with st.expander("📖 When does BERTScore matter?", expanded=False):
+        st.markdown("""
+BERTScore measures **semantic faithfulness** — not just word overlap. It uses a BERT model to compare the *meaning* of the answer to the retrieved context, catching paraphrases that token overlap misses.
+
+- With `simple` generation: answer = raw chunk text → BERTScore ≈ 1.0 (meaningless)
+- With `ollama`/`openai`: LLM paraphrases the context → BERTScore measures how faithful that paraphrase is
+
+**Install:** `pip install bert-score` (falls back to token overlap with a warning banner if not installed)
+        """)
+
+    st.divider()
+
+    # ── Quick Reference ───────────────────────────────────────────────────────
+    st.subheader("📋 Quick Reference — what metric answers my question?")
+    st.markdown("""
+| My question | Metric to check |
+|---|---|
+| Is my RAG finding the right documents? | **Recall@K**, **MRR** |
+| Is the LLM making things up? | **Type 2 Rate**, **NLI Score** *(needs ollama)* |
+| Does my RAG have knowledge gaps? | **Type 1 Rate** |
+| Is the generated answer factually grounded? | **BERTScore Faithfulness** *(needs ollama)* |
+| Is my RAG fast enough for production? | **Latency (ms)** |
+| Which chunking or embedding model is better? | Run **A/B Compare → Recall@K** |
+| Does re-ranking actually help? | Run **A/B Compare → MRR** with / without reranker |
+| Is my system ready for production? | Recall@K ≥ 0.75 · Type 1 < 10% · Latency ≤ 1.2s |
+""")
